@@ -1,141 +1,426 @@
-<table width="100%">
-  <tr>
-    <td valign="top">
-      <ul>
-        <li><a href="/Kanbas/NavigationHome/Nav3Account.html">Account</a></li>
-        <li><a href="#">Dashboard</a></li>
-        <li><a href="/Kanbas/NavigationHome/Nav1Courses.html">Courses</a></li>
-        <li><a href="#">Calender</a></li>
-        <li><a href="#">Inbox</a></li>
-        <li><a href="#">History</a></li>
-        <li><a href="#">Studio</a></li>
-        <li><a href="#">Commons</a></li>
-        <li><a href="#">Help</a></li>
-      </ul>
-    </td>
-     <td valign="top">
-      <ul>
-        <li><a href="/Kanbas/NavigationHome/Nav2Home.html">Home</a></li>
-        <li><a href="#">Modules</a></li>
-        <li>
-          <a href="#">Piazza</a>
-        </li>
-        <li><a href="#">Zoom Meetings</a></li>
-        <li><a href="/Kanbas/assignments/index.html">Assignments</a></li>
-        <li><a href="#">Quizzes</a></li>
-        <li><a href="/Kanbas/grades.html">Grades</a></li>
-        <li><a href="#">People</a></li>
-        <li><a href="#">Panapto Video</a></li>
-        <li><a href="#">Discussions</a></li>
-        <li><a href="#">Announcements</a></li>
-        <li><a href="#">Pages</a></li>
-        <li><a href="#">Files</a></li>
-        <li><a href="#">Rubrics</a></li>
-        <li><a href="#">Outcomes</a></li>
-        <li><a href="#">Collaborations</a></li>
-        <li><a href="#">Syllabus</a></li>
-        <li><a href="/Kanbas/settings/coursedetails.html">Settings</a></li>
-      </ul>
-    </td>
+<html>
 
-      <td valign="top">
-        <select>
-          <option>Speed Grader</option>
-          <option>Duplicate</option>
-          <option>Delete</option>
-          <option>Move To...</option>
-          <option>Send To...</option>
-          <option>Copy To...</option>
-          <option>Share to Commons</option>
-        </select>
-        <hr>
-        <h3>Assignment Name</h3>
-        <input
-          type="text"
-          value="A1 - ENV + HTML"
-          id="assignmentName"
-          placeholder="Assignment Name"
-        />
-        <br>
-        <br>
-        <textarea cols="50" rows="5">This is the assignment description</textarea
-        >
-        <br><br>
-        <label>Points</label><br>
-        <input value="100" type="number" max="100" min="50" step="5" />
-        <br><br>
+<head>
+  <title>Edit Assignment Page</title>
+  <link href="/Kanbas/home.css" rel="stylesheet" />
+  <link href="/Kanbas/assignments/assignment.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" rel="stylesheet" />
+</head>
 
-        <label>Assignment Group</label><br>
-        <select>
-          <option>ASSIGNMENTS</option>
-        </select>
-        <br><br>
+<body>
+  <div class="wd-flex-row-container">
+    <div class="container.fluid d-none d-sm-none d-md-block wd-width-75px wd-center-text">
+      <div class="wd-flex-col-container wd-width-75px wd-darkbg-height">
+        <div class="wd-paddingtop-10p wd-paddingbottom-10p">
+          <i class="wd-fontcolor-red fab fa-neos fa-3x"></i>
+        </div>
+        <a href="/Kanbas/NavigationHome/Nav3Account.html" class="wd-link-white">
+          <div class="wd-paddingtop-6p wd-paddingbottom-6p wd-link-white">
+            <i class="wd-paddingtop-6p fas fa-user fa-2x"></i><br />
+            <span class="wd-leftnav-fontsize-12px wd-word-wrap">Account</span>
+          </div>
+        </a>
+        <a href="/Kanbas/dashboard/index.html" class="wd-link-white">
+          <div class="wd-paddingtop-6p wd-paddingbottom-6p wd-link-white">
+            <i class="wd-paddingtop-6p wd-fontcolor-red fas fa-tachometer-alt fa-2x"></i><br />
+            <span class="wd-leftnav-fontsize-12px wd-word-wrap">Dashboard</span>
+          </div>
+        </a>
+        <a href="/Kanbas/NavigationHome/Nav1Courses.html" class="wd-link-white">
+          <div class="wd-paddingtop-6p wd-paddingbottom-6p wd-lightbg">
+            <i class="wd-paddingtop-6p wd-fontcolor-red fas fa-book fa-2x"></i><br />
+            <span class="wd-leftnav-fontsize-12px wd-word-wrap">Courses</span>
+          </div>
+        </a>
+        <a href="#" class="wd-link-white">
+          <div class="wd-paddingtop-6p wd-paddingbottom-6p wd-link-white">
+            <i class="wd-paddingtop-6p wd-fontcolor-red far fa-calendar-alt fa-2x"></i><br />
+            <span class="wd-leftnav-fontsize-12px wd-word-wrap">Calendar</span>
+          </div>
+        </a>
+        <a href="#" class="wd-link-white">
+          <div class="wd-paddingtop-6p wd-paddingbottom-6p wd-link-white">
+            <i class="wd-paddingtop-6p wd-fontcolor-red fas fa-inbox fa-2x"></i><br />
+            <span class="wd-leftnav-fontsize-12px wd-word-wrap">Inbox</span>
+          </div>
+        </a>
+        <a href="#" class="wd-link-white">
+          <div class="wd-paddingtop-6p wd-paddingbottom-6p wd-link-white">
+            <i class="wd-paddingtop-6p wd-fontcolor-red fas fa-history fa-2x"></i><br />
+            <span class="wd-leftnav-fontsize-12px wd-word-wrap">History</span>
+          </div>
+        </a>
+        <a href="#" class="wd-link-white">
+          <div class="wd-paddingtop-6p wd-paddingbottom-6p wd-marginbottom-5px wd-link-white">
+            <i class="wd-margintop-5px wd-fontcolor-red fas fa-network-wired fa-2x"></i><br />
+            <span class="wd-leftnav-fontsize-12px wd-word-wrap">Studio</span>
+          </div>
+        </a>
+        <a href="#" class="wd-link-white">
+          <div class="wd-paddingtop-6p wd-paddingbottom-6p wd-marginbottom-5px wd-link-white">
+            <i class="wd-paddingtop-6p wd-fontcolor-red fas fa-arrow-circle-right fa-2x"></i><br />
+            <span class="wd-leftnav-fontsize-12px wd-word-wrap">Commons</span>
+          </div>
+        </a>
+        <a href="#" class="wd-link-white">
+          <div class="wd-paddingtop-6p wd-paddingbottom-6p wd-marginbottom-5px wd-link-white">
+            <i class="wd-paddingtop-6p wd-fontcolor-red fas fa-question fa-2x"></i><br />
+            <span class="wd-leftnav-fontsize-12px wd-word-wrap">Help</span>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="container.fluid wd-paddingtop-20px wd-padding-left-3p wd-padding-right-3p wd-width-100p">
+      <div class="wd-flex-col-container wd-width-100p">
+        <div>
+          <i class="fas fa-bars fa-2x wd-fontcolor-red wd-breadcrumbs-inline"></i>
+          <span class="wd-padding-left-3p wd-breadcrumbs-inline">
+            <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a class="wd-link-red" href="#">CS5610WebDev.Fall2023.202410_2</a></li>
+                <li class="breadcrumb-item"><a class="wd-link-red" href="#">Assignments</a></li>
+                <li class="breadcrumb-item active" aria-current="page">A1 - ENV + HTML</li>
+              </ol>
+            </nav>
+          </span>
+          <a href="#" class="wd-link-red float-end">
+            <button class="btn btn-secondary"><i class="fas fa-glasses"></i>&nbsp;&nbsp;Student View</button>
+          </a>
+          <hr />
+        </div>
+        <div class="wd-flex-row-container">
+          <div class="container.fluid d-none d-sm-none d-md-block wd-flex-col-container wd-width-125px">
+            <div class="wd-home-label">202410_2 Fall 2023 Semest</div>
+            <div class="wd-fontcolor-red wd-link-red">
+              <a href="/Kanbas/NavigationHome/Nav2Home.html" class="wd-link-red">Home</a>
+            </div>
+            <div class="wd-paddingtop-10p">
+              <a href="#" class="wd-link-red">Modules</a>
+            </div>
+            <div class="wd-paddingtop-10p wd-fontcolor-red">
+              <a href="#" class="wd-link-red">Piazza</a>
+            </div>
+            <div class="wd-paddingtop-10p wd-fontcolor-red">
+              <a href="#" class="wd-link-red">Zoom Meetings</a>
+            </div>
+            <div class="wd-paddingtop-10p">
+              <a href="/Kanbas/assignments/index.html"
+                class="wd-link-red wd-link-black wd-vertical-line">Assignments</a>
+            </div>
+            <div class="wd-paddingtop-10p">
+              <a href="#" class="wd-link-red">Quizzes</a>
+            </div>
+            <div class="wd-paddingtop-10p">
+              <a href="/Kanbas/grades.html" class="wd-link-red">Grades</a>
+            </div>
+            <div class="wd-paddingtop-10p">
+              <a href="#" class="wd-link-red">People</a>
+            </div>
+            <div class="wd-paddingtop-10p">
+              <a href="#" class="wd-link-red">Panapto Video</a>
+            </div>
+            <div class="wd-paddingtop-10p">
+              <a href="#" class="wd-link-red">Discussions</a> &nbsp;&nbsp;<i class="fas fa-eye-slash"></i>
+            </div>
+            <div class="wd-paddingtop-10p">
+              <a href="#" class="wd-link-red">Announcements</a>
+            </div>
+            <div class="wd-paddingtop-10p">
+              <a href="#"
+                class="wd-link-red">Pages</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                class="fas fa-eye-slash"></i>
+            </div>
+            <div class="wd-paddingtop-10p">
+              <a href="#"
+                class="wd-link-red">Files</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                class="fas fa-eye-slash"></i>
+            </div>
+            <div class="wd-paddingtop-10p">
+              <a href="#"
+                class="wd-link-red">Rubrics</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                class="fas fa-eye-slash"></i>
+            </div>
+            <div class="wd-paddingtop-10p">
+              <a href="#" class="wd-link-red">Outcomes</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                class="fas fa-eye-slash"></i>
+            </div>
+            <div class="wd-paddingtop-10p">
+              <a href="#" class="wd-link-red">Collaborations</a>
+            </div>
+            <div class="wd-paddingtop-10p">
+              <a href="#" class="wd-link-red">Syllabus</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                class="fas fa-eye-slash"></i>
+            </div>
+            <div class="wd-paddingtop-10p">
+              <a href="#" class="wd-link-red">Progress Report<br>{EAB Navigate}</a>
+            </div>
+            <div class="wd-paddingtop-10p">
+              <a href="/Kanbas/settings/coursedetails.html" class="wd-link-red">Settings</a>
+            </div>
+          </div>
+          <div class="container.fluid wd-display-flex wd-padding-left-5p wd-padding-right-2p wd-width-100p">
+            <div class="wd-special-flex-direction-row wd-flex-3">
+              <div class="wd-flex-col-container wd-width-100p">
+                <div class="mb-2">
+                  <div class="d-flex justify-content-end align-items-center">
+                    <label class="d-flex align-items-center wd-green-check-circle wd-link-content-bold">
+                      <i class="fa fa-check-circle wd-green-check-circle me-1" aria-hidden="true"></i>
+                      Published
+                    </label>
+                    <button class="btn btn-link" type="button">
+                      <i class="fas fa-ellipsis-v wd-fontcolor-black"></i>
+                    </button>
+                  </div>
+                </div>
+                <hr>
+                <div class="container mt-1">
+                  <form>
+                    <div class="row mb-3">
+                      <div class="col">
+                        <label for="assignmentName" class="form-label">Assignment Name</label>
+                        <input type="text" class="form-control" id="assignmentName" placeholder="A1 - ENV + HTML">
+                      </div>
+                    </div>
+                    <div class="row mb-3">
+                      <div class="col">
+                        <textarea class="form-control" id="description" rows="3"
+                          placeholder="Assignment Description"></textarea>
+                      </div>
+                    </div>
 
-        <label>Display Grade as</label><br>
-        <select>
-          <option>Percentage</option>
-          <option>Number</option>
-        </select>
-        <br><br>
+                    <div class="form-group row mb-3">
+                      <label for="points" class="col-md-3 col-form-label">Points</label>
+                      <div class="col-md-6">
+                        <input type="number" class="form-control" id="points" placeholder="100">
+                      </div>
+                    </div>
 
-        <label>Submission Type</label><br>
-        <select>
-          <option>Online</option>
-        </select>
+                    <div class="form-group row mb-3">
+                      <label for="inputEmail3" class="col-md-3 col-form-label">Assignment Group</label>
+                      <div class="col-md-6">
+                        <select class="form-control" id="assignmentGroup">
+                          <option value="">ASSIGNMENTS</option>
+                          <option value="">ASSIGNMENTS 1</option>
+                          <option value="">ASSIGNMENTS 2</option>
+                        </select>
+                      </div>
+                    </div>
 
-        <br><br>
-        <label>Online Entry Options</label><br>
-        <input type="checkbox" id="textEntry" />
-        <label for="textEntry">Text Entry</label><br />
-        <input type="checkbox"/> Website URL <br />
-        <label> <input type="checkbox" /> Media Recordings </label> <br />
-        <label> <input type="checkbox" /> Student Annotations </label> <br />
-        <input type="checkbox" /> File Uploads<br />
-  
-        <br>
+                    <div class="form-group row mb-3">
+                      <label for="inputEmail3" class="col-md-3 col-form-label">Display Grade as</label>
+                      <div class="col-md-6">
+                        <select class="form-control" id="assignmentGroup">
+                          <option value="">Percentage</option>
+                          <option value="">Points</option>
+                        </select>
+                      </div>
+                    </div>
 
-        <label>Submission Attempts</label><br>
-        <select>
-          <option>Unlimited</option>
-        </select>
+                    <div class="form-group row mb-3">
+                      <div class="col-md-3"></div>
+                      <div class="col-md-6">
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" id="gridCheck1">
+                          <label class="form-check-label" for="gridCheck1">
+                            Do not count this assignment towards the final grade.
+                          </label>
+                        </div>
+                      </div>
+                    </div>
 
-        <br><br>
+                    <div class="form-group row mb-3">
+                      <label for="inputEmail3" class="col-md-3 col-form-label">Submission Type</label>
+                      <div class="col-md-6">
+                        <select class="form-control" id="assignmentGroup">
+                          <option value="">Online</option>
+                          <option value="">Offline</option>
+                        </select>
+                      </div>
+                    </div>
 
-        <label>Plagiarism Review</label><br>
-        <select>
-          <option>None</option>
-        </select>
-        
-        <br><br>
-        <label>Group Assignment</label><br>
-        <label> <input type="checkbox" /> This is a group assignment </label> <br />
+                    <div class="form-group row mb-3">
+                      <div class="col-md-3"></div>
+                      <div class="col-md-6">
+                        <label class="form-check-label col-form-label wd-link-content-bold">
+                          Online Entry Options
+                        </label>
+                      </div>
+                    </div>
 
-        <br>
-        <label>Peer Reviews</label><br>
-        <label> <input type="checkbox" /> Require Peer Reviews </label> <br />
+                    <div class="form-group row mb-3">
+                      <div class="col-md-3"></div>
+                      <div class="col-md-6">
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" id="gridCheck1">
+                          <label class="form-check-label" for="gridCheck1">
+                            Text Entry
+                          </label>
+                        </div>
+                      </div>
+                    </div>
 
-        <br>
-        <label>Assign</label><br>
-        <label>Assign to</label><br>
-        <input value="Everyone" />
-        <br><br>
+                    <div class="form-group row mb-3">
+                      <div class="col-md-3"></div>
+                      <div class="col-md-6">
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" id="gridCheck1">
+                          <label class="form-check-label" for="gridCheck1">
+                            Website URL
+                          </label>
+                        </div>
+                      </div>
+                    </div>
 
-        <label>Due</label><br>
-        <input type="date" value="2023-09-16" min="2022-09-04" max="2023-09-23" />
-  
-        <br><br>
+                    <div class="form-group row mb-3">
+                      <div class="col-md-3"></div>
+                      <div class="col-md-6">
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" id="gridCheck1">
+                          <label class="form-check-label" for="gridCheck1">
+                            Media Recordings
+                          </label>
+                        </div>
+                      </div>
+                    </div>
 
-        <label>Due</label><br>
-        <input type="date" value="2023-09-16" min="2022-09-04" max="2023-09-23" />
-  
-        <br><br>
+                    <div class="form-group row mb-3">
+                      <div class="col-md-3"></div>
+                      <div class="col-md-6">
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" id="gridCheck1">
+                          <label class="form-check-label" for="gridCheck1">
+                            Student Annotations
+                          </label>
+                        </div>
+                      </div>
+                    </div>
 
-        <label>Due</label><br>
-        <input type="date" value="2023-09-16" min="2022-09-04" max="2023-09-23" />
-  
-        <br><br>
-        <button>Cancel</button>
-        <button>Save</button>
-      </td>
-    </tr>
-  </table>
+                    <div class="form-group row mb-3">
+                      <div class="col-md-3"></div>
+                      <div class="col-md-6">
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" id="gridCheck1">
+                          <label class="form-check-label" for="gridCheck1">
+                            File Uploads
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="form-group row mb-3">
+                      <label for="inputEmail3" class="col-md-3 col-form-label">Assign</label>
+                      <div class="col-md-6">
+                        <label class="form-check-label col-form-label">
+                          Assign to
+                        </label>
+                        <div class="col">
+                          <input type="text" class="form-control" id="dueDate" placeholder="EveryOne">
+                        </div>
+                        <div class="col wd-paddingtop-6p">
+                          <label for="dueDate" class="form-label">Due</label>
+                          <input type="text" class="form-control" id="dueDate" placeholder="MM/DD/YYYY">
+                        </div>
+                        <div class="row mb-3">
+                          <div class="col wd-paddingtop-6p">
+                            <label for="availableDate" class="form-label">Available from</label>
+                            <input type="text" class="form-control" id="availableDate" placeholder="MM/DD/YYYY">
+                          </div>
+                          <div class="col wd-paddingtop-6p">
+                            <label for="untilDate" class="form-label">Until</label>
+                            <input type="text" class="form-control" id="untilDate" placeholder="MM/DD/YYYY">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <hr>
+                    <div class="container">
+                      <div class="row align-items-center">
+                        <div class="col-md-5">
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="gridCheck1">
+                            <label class="form-check-label" for="gridCheck1">
+                              Notify users that this content has changed
+                            </label>
+                          </div>
+                        </div>
+
+                        <div class="col-md-7 mt-3 mt-md-0 text-end">
+                          <a href="#" class="wd-link-red me-2">
+                            <button type="button" class="btn btn-secondary">Cancel</button>
+                          </a>
+                          <a href="#" class="wd-link-red">
+                            <button type="submit" class="btn btn-danger">Save</button>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+
+
+                    <hr>
+                  </form>
+                </div>
+
+              </div>
+            </div>
+            <div class="wd-flex-1 d-none">
+              <div class="wd-padding-left-15p">
+                <div>
+                  <label>Course Status</label>
+                  <div class="d-flex align-items-center">
+                    <button class="btn btn-secondary me-2">Unpublish</button>
+                    <button class="btn btn-success disabled d-flex align-items-center">
+                      <i class="fa fa-check-circle me-1" aria-hidden="true"></i>
+                      Published
+                    </button>
+                  </div>
+                </div>
+                <div class="d-flex flex-column wd-paddingtop-6p">
+                  <button class="btn btn-secondary mb-1">Import Existing Content</button>
+                  <button class="btn btn-secondary mb-1">Import From Commons</button>
+                  <button class="btn btn-secondary mb-1">Choose Home Page</button>
+                  <button class="btn btn-secondary mb-1">View Course Stream</button>
+                  <button class="btn btn-secondary mb-1">New Announcements</button>
+                  <button class="btn btn-secondary mb-1">New Analytics</button>
+                  <button class="btn btn-secondary mb-1">View Course Notifications</button>
+                </div>
+                <br>
+                <label>To Do</label>
+                <hr>
+                <a href="#" class="text-decoration-none text-danger">Grade A1 - ENV + HTML</a>
+                <br>
+                <label class="wd-leftnav-fontsize-12px">100 points . Sep 18 at 11.59pm</label>
+                <br>
+                <br>
+                <label>Coming Up</label>&nbsp; <i class="fas fa-calendar"></i> <a href="#"
+                  class="text-decoration-none text-danger float-end">View Calendar</a>
+
+                <hr>
+
+                <div>
+                  <i class="fas fa-calendar"></i>
+                  <a href="#" class="text-decoration-none text-danger">Lecture</a>
+                  <br>
+                  <label class="wd-leftnav-fontsize-12px">CS5550.1245.2345678 Sep 10 at 12:25pm</label>
+                  <br>
+                  <br>
+                  <i class="fas fa-calendar"></i>
+                  <a href="#" class="text-decoration-none text-danger">Lecture</a>
+                  <br>
+                  <label class="wd-leftnav-fontsize-12px">CS5550.1245.2345678 Sep 11 at 2:25pm</label>
+                  <br>
+                  <br>
+                  <i class="fas fa-calendar"></i>
+                  <a href="#" class="text-decoration-none text-danger">CS5550.1245.2345678 Lecture</a>
+                  <br>
+                  <label class="wd-leftnav-fontsize-12px">CS5550.1245.2345678 Sep 10 at 7pm</label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</body>
+
+</html>

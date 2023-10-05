@@ -1,80 +1,192 @@
-<table width="100%">
-    <tr>
-      <td valign="top">
-        <ul>
-          <li><a href="/Kanbas/NavigationHome/Nav3Account.html">Account</a></li>
-          <li><a href="#">Dashboard</a></li>
-          <li><a href="/Kanbas/NavigationHome/Nav1Courses.html">Courses</a></li>
-          <li><a href="#">Calender</a></li>
-          <li><a href="#">Inbox</a></li>
-          <li><a href="#">History</a></li>
-          <li><a href="#">Studio</a></li>
-          <li><a href="#">Commons</a></li>
-          <li><a href="#">Help</a></li>
-        </ul>
-      </td>
-      <td valign="top">
-        <ul>
-          <li><a href="#">Notifications</a></li>
-          <li><a href="/Kanbas/profile/index.html">Profile</a></li>
-          <li>
-            <a href="#">Files</a>
-          </li>
-          <li><a href="#">Settings</a></li>
-          <li><a href="#">ePortfolios</a></li>
-          <li><a href="#">Shared Content</a></li>
-          <li><a href="#">The Hub</a></li>
-          <li><a href="#">Quickly Course Tools</a></li>
-          <li><a href="#">Global Announcements</a></li>
-        </ul>
-      </td>
-      <td valign="top">
-        <form action="/Kanbas/profile/index.html">
-            <h3>Akshat Khare</h3>
-            <label>Name:*</label>
-            <input name="fullName" type="text" value="Akshat Khare" />
-            <label>Pronouns:</label>
-            <select>
-                <option>None</option>
-                <option>He/Him</option>
-                <option>She/Her</option>
-              </select>
-            <br><br>
-            <label>Title:</label>
-            <input name="fullName" type="text" value="" />
-            <h3>Contact</h3>
-            <label>No registered services, you can add some on the <a href="#">settings</a> page.</label>
+<html>
 
-            <h3>Contact</h3>
-            <label>No registered services, you can add some on the <a href="#">settings</a> page.</label>
+<head>
+  <title>Edit Profile Page</title>
+  <link href="profile.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" rel="stylesheet" />
+</head>
 
-            <h3>Biography</h3>
-            <label>Faculty, Software Engineer, AI, Space, and renewables enthusiast.</label>
-            <br />
-            <textarea cols="50" rows="5" name="biography">Faculty, Software Engineer, AI, Space, and renewables enthusiast.</textarea>
-            <br/>
+<body>
+  <div class="wd-flex-row-container">
+    <div class="container.fluid d-none d-sm-block wd-width-75px wd-center-text">
+      <div class="wd-flex-col-container wd-width-75px wd-darkbg-height">
+        <div class="wd-paddingtop-10p wd-paddingbottom-10p">
+          <i class="wd-fontcolor-red fab fa-neos fa-3x"></i>
+        </div>
+        <a href="/Kanbas/NavigationHome/Nav3Account.html" class="wd-link-white">
+          <div class="wd-paddingtop-6p wd-paddingbottom-6p wd-lightbg">
+            <i class="wd-paddingtop-6p wd-fontcolor-black fas fa-user fa-2x"></i><br />
+            <span class="wd-leftnav-fontsize-12px wd-word-wrap">Account</span>
+          </div>
+        </a>
+        <a href="/Kanbas/dashboard/index.html" class="wd-link-white">
+          <div class="wd-paddingtop-6p wd-paddingbottom-6p wd-link-white">
+              <i class="wd-paddingtop-6p wd-fontcolor-red fas fa-tachometer-alt fa-2x"></i><br />
+              <span class="wd-leftnav-fontsize-12px wd-word-wrap">Dashboard</span>
+          </div>
+        </a>
+        <a href="/Kanbas/NavigationHome/Nav1Courses.html" class="wd-link-white">
+          <div class="wd-paddingtop-6p wd-paddingbottom-6p wd-link-white">
+            <i class="wd-paddingtop-6p wd-fontcolor-red fas fa-book fa-2x"></i><br />
+            <span class="wd-leftnav-fontsize-12px wd-word-wrap">Courses</span>
+          </div>
+        </a>
+        <a href="#" class="wd-link-white">
+          <div class="wd-paddingtop-6p wd-paddingbottom-6p wd-link-white">
+            <i class="wd-paddingtop-6p wd-fontcolor-red far fa-calendar-alt fa-2x"></i><br />
+            <span class="wd-leftnav-fontsize-12px wd-word-wrap">Calendar</span>
+          </div>
+        </a>
+        <a href="#" class="wd-link-white">
+          <div class="wd-paddingtop-6p wd-paddingbottom-6p wd-link-white">
+            <i class="wd-paddingtop-6p wd-fontcolor-red fas fa-inbox fa-2x"></i><br />
+            <span class="wd-leftnav-fontsize-12px wd-word-wrap">Inbox</span>
+          </div>
+        </a>
+        <a href="#" class="wd-link-white">
+          <div class="wd-paddingtop-6p wd-paddingbottom-6p wd-link-white">
+            <i class="wd-paddingtop-6p wd-fontcolor-red fas fa-history fa-2x"></i><br />
+            <span class="wd-leftnav-fontsize-12px wd-word-wrap">History</span>
+          </div>
+        </a>
+        <a href="#" class="wd-link-white">
+          <div class="wd-paddingtop-6p wd-paddingbottom-6p wd-marginbottom-5px wd-link-white">
+            <i class="wd-margintop-5px wd-fontcolor-red fas fa-network-wired fa-2x"></i><br />
+            <span class="wd-leftnav-fontsize-12px wd-word-wrap">Studio</span>
+          </div>
+        </a>
+        <a href="#" class="wd-link-white">
+          <div class="wd-paddingtop-6p wd-paddingbottom-6p wd-marginbottom-5px wd-link-white">
+            <i class="wd-paddingtop-6p wd-fontcolor-red fas fa-arrow-circle-right fa-2x"></i><br />
+            <span class="wd-leftnav-fontsize-12px wd-word-wrap">Commons</span>
+          </div>
+        </a>
+        <a href="#" class="wd-link-white">
+          <div class="wd-paddingtop-6p wd-paddingbottom-6p wd-marginbottom-5px wd-link-white">
+            <i class="wd-paddingtop-6p wd-fontcolor-red fas fa-question fa-2x"></i><br />
+            <span class="wd-leftnav-fontsize-12px wd-word-wrap">Help</span>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="container.fluid wd-paddingtop-20px wd-padding-left-3p wd-padding-right-3p wd-width-100p">
+      <div class="wd-flex-col-container wd-width-100p">
+        <div>
+          <i class="fas fa-bars fa-2x wd-fontcolor-red"></i> <span class="wd-padding-left-3p">Akshat Khare's Profile</span>
+          <hr />
+        </div>
+        <div class="wd-flex-row-container">
+          <div class="container.fluid d-none d-sm-block wd-flex-col-container wd-width-125px">
+            <div class="wd-fontcolor-red wd-link-red">
+              <a href="#" class="wd-link-red">Notifications</a>
+            </div>
+            <div class="wd-paddingtop-10p">
+              <a href="/Kanbas/profile/index.html" class="wd-link-black wd-vertical-line">Profile</a>
+            </div>
+            <div class="wd-paddingtop-10p wd-fontcolor-red">
+              <a href="#" class="wd-link-red">Files</a>
+            </div>
+            <div class="wd-paddingtop-10p wd-fontcolor-red">
+              <a href="#" class="wd-link-red">Settings</a>
+            </div>
+            <div class="wd-paddingtop-10p wd-fontcolor-red">
+              <a href="#" class="wd-link-red">ePortfolios</a>
+            </div>
+            <div class="wd-paddingtop-10p wd-fontcolor-red">
+              <a href="#" class="wd-link-red">Shared Content</a>
+            </div>
+            <div class="wd-paddingtop-10p wd-fontcolor-red">
+              <a href="#" class="wd-link-red">The Hub</a>
+            </div>
+            <div class="wd-paddingtop-10p wd-fontcolor-red">
+              <a href="#" class="wd-link-red">Qwickly Course Tools</a>
+            </div>
+            <div class="wd-paddingtop-10p wd-fontcolor-red">
+              <a href="#" class="wd-link-red">Global ADN Announcements</a>
+            </div>
+          </div>
+          <div class="container.fluid wd-display-flex wd-padding-left-5p wd-padding-right-2p wd-width-100p">
+            <div class="wd-special-flex-direction-row wd-flex-3">
+              <div class="wd-padding-right-2p">
+                <i class="wd-font-size-140px fas fa-user-circle"></i>
+              </div>
+              <div>
+                <div class="wd-flex-col-container">
+                  <div class="wd-paddingtop-15px">
+                    <label for="fullName">Name:*</label>
+                    <input id="fullName" name="fullName" type="text" value="Akshat Khare" class="form-control" />
+                  </div>
+                  <div class="wd-paddingtop-15px">
+                    <label for="pronouns">Pronouns:</label>
+                    <select id="pronouns" class="form-select">
+                      <option>None</option>
+                      <option>He/Him</option>
+                      <option>She/Her</option>
+                    </select>
+                  </div>
+                  <div class="wd-paddingtop-15px">
+                    <label for="title">Title:</label>
+                    <input id="title" name="title" type="text" value="" class="form-control" />
+                  </div>
+                  <br />
+                  <div class="wd-paddingtop-15px">
+                    <span class="wd-font-size-25px">Contact</span><br />
+                    No registered services, you can add some on the
+                    <a href="#" class="wd-link-red" target="_blank">settings</a>&nbsp;page.
+                  </div>
+                  <br />
+                  <div class="wd-paddingtop-15px">
+                    <span class="wd-font-size-25px">Biography</span><br />
+                    <textarea id="biography" cols="50" rows="5" name="biography"
+                      class="form-control">Faculty, Software Engineer, AI, Space, and renewables enthusiast.</textarea>
+                  </div>
 
-            <h3>Links</h3>
-            <ul>
-                <li><a href="#">YouTube</a> -> Links to an external site.
-                </li>
-            </ul>
+                  <div class="wd-paddingtop-15px">
+                    <span class="wd-font-size-25px">Links</span><br />
+                    <div class="row">
+                      <div class="col">
+                        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span
+                          class="wd-font-size-20px">Title</span><br />
+                      </div>
+                      <div class="col">
+                        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span
+                          class="wd-font-size-20px">URL</span><br />
+                      </div>
+                    </div>
+                    <div class="wd-links-input-group">
+                      <input id="linkTitle" name="linkTitle" type="text" value="YouTube" class="form-control" />
+                      <i class="fas fa-arrow-right"></i>&nbsp;
+                      <input id="linkURL" name="linkURL" type="text" value="https://www.youtube.com"
+                        class="form-control" />
+                      <a href="#"><i class="fas fa-times wd-link-red"></i></a>
+                    </div>
+                    <button type="button" class="btn btn-secondary">Add Another Link</button>
+                    <hr>
+                    <div class="mt-3 wd-edit-profile-save">
+                      <a href="index.html" class="wd-link-red">
+                        <button type="button" class="btn btn-secondary">Cancel</button>
+                      </a>
+                      &nbsp;
+                      <a href="index.html" class="wd-link-red">
+                        <button type="submit" class="btn btn-danger">Save Profile</button>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="wd-flex-1">
+              <a href="index.html" class="wd-link-red">
+                <button class="btn btn-secondary float-end"><i class="fas fa-pencil-alt"></i>&nbspCancel
+                  Editing</button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
 
-            <h4>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspTitle&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-                &nbsp&nbsp&nbsp&nbsp
-                URL</h4>
-            <input name="fullName" type="text" value="Youtube" />
-            ->
-            <input name="fullName" type="text" value="https://www.youtube.com"/>
-            <a href="#">Remove</a>
-            <br>
-            <button type="submit" formaction="#">Add Another Link</button><br>
-            <button type="submit" formaction="#">Cancel</button>
-            <button>Save Profile</button><br>
-            <button type="submit" formaction="#">Edit Profile</button>
-            <button>Cancel Editing</button>
-        </form>
-      </td>
-    </tr>
-  </table>
+</html>

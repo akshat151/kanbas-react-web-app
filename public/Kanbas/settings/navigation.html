@@ -1,140 +1,308 @@
-<table width="100%">
-    <tr>
-        <td valign="top">
-            <ul>
-              <li><a href="/Kanbas/NavigationHome/Nav3Account.html">Account</a></li>
-              <li><a href="#">Dashboard</a></li>
-              <li><a href="/Kanbas/NavigationHome/Nav1Courses.html">Courses</a></li>
-              <li><a href="#">Calender</a></li>
-              <li><a href="#">Inbox</a></li>
-              <li><a href="#">History</a></li>
-              <li><a href="#">Studio</a></li>
-              <li><a href="#">Commons</a></li>
-              <li><a href="#">Help</a></li>
-            </ul>
-          </td>
-       <td valign="top">
-        <ul>
-          <li><a href="/Kanbas/NavigationHome/Nav2Home.html">Home</a></li>
-          <li><a href="#">Modules</a></li>
-          <li>
-            <a href="#">Piazza</a>
-          </li>
-          <li><a href="#">Zoom Meetings</a></li>
-          <li><a href="/Kanbas/assignments/index.html">Assignments</a></li>
-          <li><a href="#">Quizzes</a></li>
-          <li><a href="/Kanbas/grades.html">Grades</a></li>
-          <li><a href="#">People</a></li>
-          <li><a href="#">Panapto Video</a></li>
-          <li><a href="#">Discussions</a></li>
-          <li><a href="#">Announcements</a></li>
-          <li><a href="#">Pages</a></li>
-          <li><a href="#">Files</a></li>
-          <li><a href="#">Rubrics</a></li>
-          <li><a href="#">Outcomes</a></li>
-          <li><a href="#">Collaborations</a></li>
-          <li><a href="#">Syllabus</a></li>
-          <li><a href="/Kanbas/settings/coursedetails.html">Settings</a></li>
-        </ul>
-      </td>
+<html>
 
-      <td valign="top">
-        <form action="/Kanbas/settings/coursedetails.html">
-        <button>Course Details</button>
-        <button type="submit" formaction="#">Sections</button>
-        <button type="submit" formaction="#">Navigation</button>
-        <button type="submit" formaction="#">Apps</button>
-        <button type="submit" formaction="#">Feature Options</button>
-        <button type="submit" formaction="#">Integrations</button>
-        <hr>
-        <h3>Drag and Drop items to reorder them in the course navigation</h3>
-        <select>
-            <option>Home</option>
-        </select>
-        <br><br>
-        <select>
-            <option>Modules</option>
-        </select>
-        <br><br>
-        <select>
-            <option>Piazza</option>
-        </select>
-        <br><br>
-        <select>
-            <option>Zoom Meetings</option>
-        </select>
-        <br><br>
-        <select>
-            <option>Assignments</option>
-        </select>
-        <br><br>
-        <select>
-            <option>Quizzes</option>
-        </select>
-        <br><br>
-        <select>
-            <option>Grades</option>
-        </select>
-        <br><br>
-        <select>
-            <option>People</option>
-        </select>
-        <br><br>
-        <select>
-            <option>Panapto Video</option>
-        </select>
+<head>
+    <title>Settings Navigation</title>
+    <link href="/Kanbas/home.css" rel="stylesheet" />
+    <link href="/Kanbas/assignments/assignment.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" rel="stylesheet" />
+</head>
 
-        <h3>Drag items here to hide them from students</h3>
-        <select>
-            <option>Chat</option>
-        </select>
-        <br><br>
-        <select>
-            <option>Scorm</option>
-        </select>
-        <br><br>
-        <select>
-            <option>Attendance</option>
-        </select>
-        <br><br>
-        <select>
-            <option>Barnes and Noble Book Store</option>
-        </select>
-        <br><br>
-        <select>
-            <option>Digication</option>
-        </select>
-        <br><br>
-        <select>
-            <option>Top Hat</option>
-        </select>
-        <br><br>
-        <select>
-            <option>Syllabus</option>
-        </select>
-        <br><br>
-        <select>
-            <option>Perusall</option>
-        </select>
-        <br><br>
-        <select>
-            <option>Microsoft Team Meetings</option>
-        </select>
-        <br><br>
-        <select>
-            <option>Microsoft Team For Canvas</option>
-        </select>
-        <br><br>
-        <select>
-            <option>GradeScope 1.3</option>
-        </select>
-        <br><br>
-        <select>
-            <option>VHL Central</option>
-        </select>
-        <br><br>
-        <button type="submit" formaction="#">Save</button>
-        </form>
-      </td>
-    </tr>
-  </table>
+<body>
+    <div class="wd-flex-row-container">
+        <div class="container.fluid d-none d-sm-none d-md-block wd-width-75px wd-center-text">
+            <div class="wd-flex-col-container wd-width-75px wd-darkbg-height">
+                <div class="wd-paddingtop-10p wd-paddingbottom-10p">
+                    <i class="wd-fontcolor-red fab fa-neos fa-3x"></i>
+                </div>
+                <a href="/Kanbas/NavigationHome/Nav3Account.html" class="wd-link-white">
+                    <div class="wd-paddingtop-6p wd-paddingbottom-6p wd-link-white">
+                        <i class="wd-paddingtop-6p fas fa-user fa-2x"></i><br />
+                        <span class="wd-leftnav-fontsize-12px wd-word-wrap">Account</span>
+                    </div>
+                </a>
+                <a href="/Kanbas/dashboard/index.html" class="wd-link-white">
+                    <div class="wd-paddingtop-6p wd-paddingbottom-6p wd-link-white">
+                        <i class="wd-paddingtop-6p wd-fontcolor-red fas fa-tachometer-alt fa-2x"></i><br />
+                        <span class="wd-leftnav-fontsize-12px wd-word-wrap">Dashboard</span>
+                    </div>
+                </a>
+                <a href="/Kanbas/NavigationHome/Nav1Courses.html" class="wd-link-white">
+                    <div class="wd-paddingtop-6p wd-paddingbottom-6p wd-lightbg">
+                        <i class="wd-paddingtop-6p wd-fontcolor-red fas fa-book fa-2x"></i><br />
+                        <span class="wd-leftnav-fontsize-12px wd-word-wrap">Courses</span>
+                    </div>
+                </a>
+                <a href="#" class="wd-link-white">
+                    <div class="wd-paddingtop-6p wd-paddingbottom-6p wd-link-white">
+                        <i class="wd-paddingtop-6p wd-fontcolor-red far fa-calendar-alt fa-2x"></i><br />
+                        <span class="wd-leftnav-fontsize-12px wd-word-wrap">Calendar</span>
+                    </div>
+                </a>
+                <a href="#" class="wd-link-white">
+                    <div class="wd-paddingtop-6p wd-paddingbottom-6p wd-link-white">
+                        <i class="wd-paddingtop-6p wd-fontcolor-red fas fa-inbox fa-2x"></i><br />
+                        <span class="wd-leftnav-fontsize-12px wd-word-wrap">Inbox</span>
+                    </div>
+                </a>
+                <a href="#" class="wd-link-white">
+                    <div class="wd-paddingtop-6p wd-paddingbottom-6p wd-link-white">
+                        <i class="wd-paddingtop-6p wd-fontcolor-red fas fa-history fa-2x"></i><br />
+                        <span class="wd-leftnav-fontsize-12px wd-word-wrap">History</span>
+                    </div>
+                </a>
+                <a href="#" class="wd-link-white">
+                    <div class="wd-paddingtop-6p wd-paddingbottom-6p wd-marginbottom-5px wd-link-white">
+                        <i class="wd-margintop-5px wd-fontcolor-red fas fa-network-wired fa-2x"></i><br />
+                        <span class="wd-leftnav-fontsize-12px wd-word-wrap">Studio</span>
+                    </div>
+                </a>
+                <a href="#" class="wd-link-white">
+                    <div class="wd-paddingtop-6p wd-paddingbottom-6p wd-marginbottom-5px wd-link-white">
+                        <i class="wd-paddingtop-6p wd-fontcolor-red fas fa-arrow-circle-right fa-2x"></i><br />
+                        <span class="wd-leftnav-fontsize-12px wd-word-wrap">Commons</span>
+                    </div>
+                </a>
+                <a href="#" class="wd-link-white">
+                    <div class="wd-paddingtop-6p wd-paddingbottom-6p wd-marginbottom-5px wd-link-white">
+                        <i class="wd-paddingtop-6p wd-fontcolor-red fas fa-question fa-2x"></i><br />
+                        <span class="wd-leftnav-fontsize-12px wd-word-wrap">Help</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="container.fluid wd-paddingtop-20px wd-padding-left-3p wd-padding-right-3p wd-width-100p">
+            <div class="wd-flex-col-container wd-width-100p">
+                <div>
+                    <i class="fas fa-bars fa-2x wd-fontcolor-red wd-breadcrumbs-inline"></i>
+                    <span class="wd-padding-left-3p wd-breadcrumbs-inline">
+                        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a class="wd-link-red"
+                                        href="#">CS5610WebDev.Fall2023.202410_2</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Settings</li>
+                            </ol>
+                        </nav>
+                    </span>
+                    <hr />
+                </div>
+                <div class="wd-flex-row-container">
+                    <div class="container.fluid d-none d-sm-none d-md-block wd-flex-col-container wd-width-125px">
+                        <div class="wd-home-label">202410_2 Fall 2023 Semest</div>
+                        <div class="wd-fontcolor-red wd-link-red">
+                            <a href="/Kanbas/NavigationHome/Nav2Home.html" class="wd-link-red">Home</a>
+                        </div>
+                        <div class="wd-paddingtop-10p">
+                            <a href="#" class="wd-link-red">Modules</a>
+                        </div>
+                        <div class="wd-paddingtop-10p wd-fontcolor-red">
+                            <a href="#" class="wd-link-red">Piazza</a>
+                        </div>
+                        <div class="wd-paddingtop-10p wd-fontcolor-red">
+                            <a href="#" class="wd-link-red">Zoom Meetings</a>
+                        </div>
+                        <div class="wd-paddingtop-10p">
+                            <a href="/Kanbas/assignments/index.html" class="wd-link-red ">Assignments</a>
+                        </div>
+                        <div class="wd-paddingtop-10p">
+                            <a href="#" class="wd-link-red">Quizzes</a>
+                        </div>
+                        <div class="wd-paddingtop-10p">
+                            <a href="/Kanbas/grades.html" class="wd-link-red">Grades</a>
+                        </div>
+                        <div class="wd-paddingtop-10p">
+                            <a href="#" class="wd-link-red">People</a>
+                        </div>
+                        <div class="wd-paddingtop-10p">
+                            <a href="#" class="wd-link-red">Panapto Video</a>
+                        </div>
+                        <div class="wd-paddingtop-10p">
+                            <a href="#" class="wd-link-red">Discussions</a> &nbsp;&nbsp;<i class="fas fa-eye-slash"></i>
+                        </div>
+                        <div class="wd-paddingtop-10p">
+                            <a href="#" class="wd-link-red">Announcements</a>
+                        </div>
+                        <div class="wd-paddingtop-10p">
+                            <a href="#"
+                                class="wd-link-red">Pages</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                class="fas fa-eye-slash"></i>
+                        </div>
+                        <div class="wd-paddingtop-10p">
+                            <a href="#"
+                                class="wd-link-red">Files</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                class="fas fa-eye-slash"></i>
+                        </div>
+                        <div class="wd-paddingtop-10p">
+                            <a href="#"
+                                class="wd-link-red">Rubrics</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                class="fas fa-eye-slash"></i>
+                        </div>
+                        <div class="wd-paddingtop-10p">
+                            <a href="#" class="wd-link-red">Outcomes</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                class="fas fa-eye-slash"></i>
+                        </div>
+                        <div class="wd-paddingtop-10p">
+                            <a href="#" class="wd-link-red">Collaborations</a>
+                        </div>
+                        <div class="wd-paddingtop-10p">
+                            <a href="#"
+                                class="wd-link-red">Syllabus</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                class="fas fa-eye-slash"></i>
+                        </div>
+                        <div class="wd-paddingtop-10p">
+                            <a href="#" class="wd-link-red">Progress Report<br>{EAB Navigate}</a>
+                        </div>
+                        <div class="wd-paddingtop-10p">
+                            <a href="/Kanbas/settings/coursedetails.html"
+                                class="wd-link-red wd-link-black wd-vertical-line">Settings</a>
+                        </div>
+                    </div>
+                    <div class="container.fluid wd-display-flex wd-padding-left-5p wd-padding-right-2p wd-width-100p">
+                        <div class="wd-special-flex-direction-row wd-flex-3">
+                            <div class="wd-flex-col-container wd-width-100p">
+                                <ul class="nav nav-tabs wd-nav-format mb-2" id="myTabs" role="tablist">
+                                    <li class="nav-item" role="presentation">
+                                        <a class="nav-link" id="course-details-tab" data-toggle="tab"
+                                            href="/Kanbas/settings/coursedetails.html" role="tab"
+                                            aria-controls="course-details" aria-selected="false">Course Details</a>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <a class="nav-link" id="sections-tab" href="#" role="tab"
+                                            aria-controls="sections" aria-selected="false">Sections</a>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <a class="nav-link active" id="navigation-tab" data-toggle="tab" href="#"
+                                            role="tab" aria-controls="navigation" aria-selected="true">Navigation</a>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <a class="nav-link" id="apps-tab" href="#" role="tab" aria-controls="apps"
+                                            aria-selected="false">Apps</a>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <a class="nav-link" id="feature-options-tab" href="#" role="tab"
+                                            aria-controls="feature-options" aria-selected="false">Feature Options</a>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <a class="nav-link" id="integrations-tab" href="#" role="tab"
+                                            aria-controls="integrations" aria-selected="false">Integrations</a>
+                                    </li>
+                                </ul>
+                                <div class="tab-content" id="myTabsContent">
+                                    <div class="container mt-1">
+                                        <label class="mb-3">Drag and Drop items to reorder them in the course
+                                            navigation</label>
+                                        <div class="col-8">
+                                            <select class="form-control mb-2">
+                                                <option>Home</option>
+                                            </select>
+
+                                            <select class="form-control mb-2">
+                                                <option>Modules</option>
+                                            </select>
+
+                                            <select class="form-control mb-2">
+                                                <option>Piazza</option>
+                                            </select>
+
+                                            <select class="form-control mb-2">
+                                                <option>Zoom Meetings</option>
+                                            </select>
+
+                                            <select class="form-control mb-2">
+                                                <option>Assignments</option>
+                                            </select>
+
+                                            <select class="form-control mb-2">
+                                                <option>Quizzes</option>
+                                            </select>
+
+                                            <select class="form-control mb-2">
+                                                <option>Grades</option>
+                                            </select>
+
+                                            <select class="form-control mb-2">
+                                                <option>People</option>
+                                            </select>
+
+                                            <select class="form-control mb-2">
+                                                <option>Panapto Video</option>
+                                            </select>
+                                        </div>
+                                        <br>
+
+                                        <label class="mb-3">Drag items here to hide them from students</label>
+                                        <div class="col-8">
+                                            <select class="form-control mb-2">
+                                                <option>Chat</option>
+                                            </select>
+
+                                            <select class="form-control mb-2">
+                                                <option>Scorm</option>
+                                            </select>
+
+                                            <select class="form-control mb-2">
+                                                <option>Attendance</option>
+                                            </select>
+
+                                            <select class="form-control mb-2">
+                                                <option>Barnes and Noble Book Store</option>
+                                            </select>
+
+                                            <select class="form-control mb-2">
+                                                <option>Digication</option>
+                                            </select>
+
+                                            <select class="form-control mb-2">
+                                                <option>Top Hat</option>
+                                            </select>
+
+                                            <select class="form-control mb-2">
+                                                <option>Syllabus</option>
+                                            </select>
+
+                                            <select class="form-control mb-2">
+                                                <option>Perusall</option>
+                                            </select>
+
+                                            <select class="form-control mb-2">
+                                                <option>Microsoft Team Meetings</option>
+                                            </select>
+
+                                            <select class="form-control mb-2">
+                                                <option>Microsoft Team For Canvas</option>
+                                            </select>
+
+                                            <select class="form-control mb-2">
+                                                <option>GradeScope 1.3</option>
+                                            </select>
+
+                                            <select class="form-control mb-2">
+                                                <option>VHL Central</option>
+                                            </select>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="container wd-paddingbottom-6p">
+                                        <div class="row align-items-center">
+                                            <div class="col mt-3 mt-md-0">
+                                                <a href="#" class="wd-link-red">
+                                                    <button type="submit" class="btn btn-danger">Save</button>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    </form>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

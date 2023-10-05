@@ -1,0 +1,20 @@
+.wd-course-card {
+    width: 250px;
+    min-width: 250px;
+    max-width: 270px;
+    margin: 15px;
+    padding: 15px;
+    border: 1px solid #ccc;
+}
+
+.wd-course-card img {
+    width: 100%;
+    height: 150px; /* Adjust the height as needed */
+    object-fit: cover;
+}
+
+.wd-course-container {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+

@@ -1,130 +1,375 @@
-<table width="100%">
-    <tr>
-        <td valign="top">
-            <ul>
-              <li><a href="/Kanbas/NavigationHome/Nav3Account.html">Account</a></li>
-              <li><a href="#">Dashboard</a></li>
-              <li><a href="/Kanbas/NavigationHome/Nav1Courses.html">Courses</a></li>
-              <li><a href="#">Calender</a></li>
-              <li><a href="#">Inbox</a></li>
-              <li><a href="#">History</a></li>
-              <li><a href="#">Studio</a></li>
-              <li><a href="#">Commons</a></li>
-              <li><a href="#">Help</a></li>
-            </ul>
-          </td>
-       <td valign="top">
-        <ul>
-          <li><a href="/Kanbas/NavigationHome/Nav2Home.html">Home</a></li>
-          <li><a href="#">Modules</a></li>
-          <li>
-            <a href="#">Piazza</a>
-          </li>
-          <li><a href="#">Zoom Meetings</a></li>
-          <li><a href="/Kanbas/assignments/index.html">Assignments</a></li>
-          <li><a href="#">Quizzes</a></li>
-          <li><a href="/Kanbas/grades.html">Grades</a></li>
-          <li><a href="#">People</a></li>
-          <li><a href="#">Panapto Video</a></li>
-          <li><a href="#">Discussions</a></li>
-          <li><a href="#">Announcements</a></li>
-          <li><a href="#">Pages</a></li>
-          <li><a href="#">Files</a></li>
-          <li><a href="#">Rubrics</a></li>
-          <li><a href="#">Outcomes</a></li>
-          <li><a href="#">Collaborations</a></li>
-          <li><a href="#">Syllabus</a></li>
-          <li><a href="/Kanbas/settings/coursedetails.html">Settings</a></li>
-        </ul>
-      </td>
+<html>
 
-      <td valign="top">
-        <input
-            title="Type the name of the Assignment to search for"
-            placeholder="Search For Assignments"
-        />
-        <button>Group</button>
-        <button>Assignment</button>
-        <select>
-            <option>Edit Assignment Dates</option>
-            <option>Speed Grader</option>
-            <option>Duplicate</option>
-            <option>Delete</option>
-            <option>Move To...</option>
-            <option>Send To...</option>
-            <option>Copy To...</option>
-            <option>Share to Commons</option>
-        </select>
-        <hr>
-        <h3>ASSIGNMENTS 40% of Total
-        <select>
-            <option>Edit</option>
-            <option>Speed Grader</option>
-            <option>Duplicate</option>
-            <option>Delete</option>
-            <option>Move To...</option>
-            <option>Send To...</option>
-            <option>Copy To...</option>
-            <option>Share to Commons</option>
-        </select>
-        </h3>
-        <ul>
-            <li><a href="/Kanbas/assignments/edit.html">A1 - ENV + HTML </a><br><a href="#">Multiple Modules</a> | Not Available</li>
-            <li><a href="/Kanbas/assignments/edit2.html">A2 - CSS + BOOTSTRAP</a><br><a href="#">Multiple Modules</a> | Not Available</li>
-            <li><a href="/Kanbas/assignments/edit3.html">A3 - JS + REACT</a><br><a href="#">Multiple Modules</a> | Not Available</li>
-            <li><a href="/Kanbas/assignments/edit4.html">A4 - STATE + REDUX</a><br><a href="#">Multiple Modules</a> | Not Available</li>
-            <li><a href="/Kanbas/assignments/edit5.html">A5 - NODE + SESSION</a><br><a href="#">Multiple Modules</a> | Not Available</li>
-            <li><a href="/Kanbas/assignments/edit6.html">A6 - MONGO + MONGOOSE</a><br><a href="#">Multiple Modules</a> | Not Available</li>
-        </ul>
+<head>
+  <title>Assignment Page</title>
+  <link href="/Kanbas/home.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" rel="stylesheet" />
+</head>
 
-        <h3>QUIZZES 10% of Total
-        <select>
-            <option>Edit</option>
-            <option>Speed Grader</option>
-            <option>Duplicate</option>
-            <option>Delete</option>
-            <option>Move To...</option>
-            <option>Send To...</option>
-            <option>Copy To...</option>
-            <option>Share to Commons</option>
-        </select></h3>
-        <ul>
-            <li><a href="#">Q1 - ENV + HTML<br>Multiple Modules</a> | Not Available</li>
-            <li><a href="#">Q2 - CSS + BOOTSTRAP<br>Multiple Modules</a> | Not Available</li>
-            <li><a href="#">Q3 - JS + REACT<br>Multiple Modules</a> | Not Available</li>
-            <li><a href="#">Q4 - NODE + SESSION<br>Multiple Modules</a> | Not Available</li>
-            <li><a href="#">Q6 - MONGO + MONGOOSE<br>Multiple Modules</a> | Not Available</li>
-        </ul>
+<body>
+  <div class="wd-flex-row-container">
+    <div class="container.fluid d-none d-sm-none d-md-block wd-width-75px wd-center-text">
+      <div class="wd-flex-col-container wd-width-75px wd-darkbg-height">
+        <div class="wd-paddingtop-10p wd-paddingbottom-10p">
+          <i class="wd-fontcolor-red fab fa-neos fa-3x"></i>
+        </div>
+        <a href="/Kanbas/NavigationHome/Nav3Account.html" class="wd-link-white">
+          <div class="wd-paddingtop-6p wd-paddingbottom-6p wd-link-white">
+            <i class="wd-paddingtop-6p fas fa-user fa-2x"></i><br />
+            <span class="wd-leftnav-fontsize-12px wd-word-wrap">Account</span>
+          </div>
+        </a>
+        <a href="/Kanbas/dashboard/index.html" class="wd-link-white">
+          <div class="wd-paddingtop-6p wd-paddingbottom-6p wd-link-white">
+            <i class="wd-paddingtop-6p wd-fontcolor-red fas fa-tachometer-alt fa-2x"></i><br />
+            <span class="wd-leftnav-fontsize-12px wd-word-wrap">Dashboard</span>
+          </div>
+        </a>
+        <a href="/Kanbas/NavigationHome/Nav1Courses.html" class="wd-link-white">
+          <div class="wd-paddingtop-6p wd-paddingbottom-6p wd-lightbg">
+            <i class="wd-paddingtop-6p wd-fontcolor-red fas fa-book fa-2x"></i><br />
+            <span class="wd-leftnav-fontsize-12px wd-word-wrap">Courses</span>
+          </div>
+        </a>
+        <a href="#" class="wd-link-white">
+          <div class="wd-paddingtop-6p wd-paddingbottom-6p wd-link-white">
+            <i class="wd-paddingtop-6p wd-fontcolor-red far fa-calendar-alt fa-2x"></i><br />
+            <span class="wd-leftnav-fontsize-12px wd-word-wrap">Calendar</span>
+          </div>
+        </a>
+        <a href="#" class="wd-link-white">
+          <div class="wd-paddingtop-6p wd-paddingbottom-6p wd-link-white">
+            <i class="wd-paddingtop-6p wd-fontcolor-red fas fa-inbox fa-2x"></i><br />
+            <span class="wd-leftnav-fontsize-12px wd-word-wrap">Inbox</span>
+          </div>
+        </a>
+        <a href="#" class="wd-link-white">
+          <div class="wd-paddingtop-6p wd-paddingbottom-6p wd-link-white">
+            <i class="wd-paddingtop-6p wd-fontcolor-red fas fa-history fa-2x"></i><br />
+            <span class="wd-leftnav-fontsize-12px wd-word-wrap">History</span>
+          </div>
+        </a>
+        <a href="#" class="wd-link-white">
+          <div class="wd-paddingtop-6p wd-paddingbottom-6p wd-marginbottom-5px wd-link-white">
+            <i class="wd-margintop-5px wd-fontcolor-red fas fa-network-wired fa-2x"></i><br />
+            <span class="wd-leftnav-fontsize-12px wd-word-wrap">Studio</span>
+          </div>
+        </a>
+        <a href="#" class="wd-link-white">
+          <div class="wd-paddingtop-6p wd-paddingbottom-6p wd-marginbottom-5px wd-link-white">
+            <i class="wd-paddingtop-6p wd-fontcolor-red fas fa-arrow-circle-right fa-2x"></i><br />
+            <span class="wd-leftnav-fontsize-12px wd-word-wrap">Commons</span>
+          </div>
+        </a>
+        <a href="#" class="wd-link-white">
+          <div class="wd-paddingtop-6p wd-paddingbottom-6p wd-marginbottom-5px wd-link-white">
+            <i class="wd-paddingtop-6p wd-fontcolor-red fas fa-question fa-2x"></i><br />
+            <span class="wd-leftnav-fontsize-12px wd-word-wrap">Help</span>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="container.fluid wd-paddingtop-20px wd-padding-left-3p wd-padding-right-3p wd-width-100p">
+      <div class="wd-flex-col-container wd-width-100p">
+        <div>
+          <i class="fas fa-bars fa-2x wd-fontcolor-red wd-breadcrumbs-inline"></i>
+          <span class="wd-padding-left-3p wd-breadcrumbs-inline">
+            <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a class="wd-link-red" href="#">CS5610WebDev.Fall2023.202410_2</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Assignments</li>
+              </ol>
+            </nav>
+          </span>
+          <a href="#" class="wd-link-red float-end">
+            <button class="btn btn-secondary"><i class="fas fa-glasses"></i>&nbsp;&nbsp;Student View</button>
+          </a>
 
-        <h3>EXAMS 20% of Total
-        <select>
-            <option>Edit</option>
-            <option>Speed Grader</option>
-            <option>Duplicate</option>
-            <option>Delete</option>
-            <option>Move To...</option>
-            <option>Send To...</option>
-            <option>Copy To...</option>
-            <option>Share to Commons</option>
-        </select></h3>
-        <ul>
-            <li><a href="#">Midterm<br>Multiple Modules</a> | Not Available</li>
-            <li><a href="#">Final<br>Multiple Modules</a> | Not Available</li>
-        </ul>
-        <h3>PROJECT 30% of Total
-        <select>
-            <option>Edit</option>
-            <option>Speed Grader</option>
-            <option>Duplicate</option>
-            <option>Delete</option>
-            <option>Move To...</option>
-            <option>Send To...</option>
-            <option>Copy To...</option>
-            <option>Share to Commons</option>
-        </select></h3>
-        <ul>
-            <li><a href="#">Project<br>Multiple Modules</a> | Not Available</li>
-        </ul>
-      </td>
-    </tr>
-  </table>
+          <hr />
+        </div>
+        <div class="wd-flex-row-container">
+          <div class="container.fluid d-none d-sm-none d-md-block wd-flex-col-container wd-width-125px">
+            <div class="wd-home-label">202410_2 Fall 2023 Semest</div>
+            <div class="wd-fontcolor-red wd-link-red">
+              <a href="/Kanbas/NavigationHome/Nav2Home.html" class="wd-link-red">Home</a>
+            </div>
+            <div class="wd-paddingtop-10p">
+              <a href="#" class="wd-link-red">Modules</a>
+            </div>
+            <div class="wd-paddingtop-10p wd-fontcolor-red">
+              <a href="#" class="wd-link-red">Piazza</a>
+            </div>
+            <div class="wd-paddingtop-10p wd-fontcolor-red">
+              <a href="#" class="wd-link-red">Zoom Meetings</a>
+            </div>
+            <div class="wd-paddingtop-10p">
+              <a href="/Kanbas/assignments/index.html" class="wd-link-red wd-link-black wd-vertical-line">Assignments</a>
+            </div>
+            <div class="wd-paddingtop-10p">
+              <a href="#" class="wd-link-red">Quizzes</a>
+            </div>
+            <div class="wd-paddingtop-10p">
+              <a href="/Kanbas/grades.html" class="wd-link-red">Grades</a>
+            </div>
+            <div class="wd-paddingtop-10p">
+              <a href="#" class="wd-link-red">People</a>
+            </div>
+            <div class="wd-paddingtop-10p">
+              <a href="#" class="wd-link-red">Panapto Video</a>
+            </div>
+            <div class="wd-paddingtop-10p">
+              <a href="#" class="wd-link-red">Discussions</a> &nbsp;&nbsp;<i class="fas fa-eye-slash"></i>
+            </div>
+            <div class="wd-paddingtop-10p">
+              <a href="#" class="wd-link-red">Announcements</a>
+            </div>
+            <div class="wd-paddingtop-10p">
+              <a href="#"
+                class="wd-link-red">Pages</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                class="fas fa-eye-slash"></i>
+            </div>
+            <div class="wd-paddingtop-10p">
+              <a href="#"
+                class="wd-link-red">Files</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                class="fas fa-eye-slash"></i>
+            </div>
+            <div class="wd-paddingtop-10p">
+              <a href="#"
+                class="wd-link-red">Rubrics</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                class="fas fa-eye-slash"></i>
+            </div>
+            <div class="wd-paddingtop-10p">
+              <a href="#" class="wd-link-red">Outcomes</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                class="fas fa-eye-slash"></i>
+            </div>
+            <div class="wd-paddingtop-10p">
+              <a href="#" class="wd-link-red">Collaborations</a>
+            </div>
+            <div class="wd-paddingtop-10p">
+              <a href="#" class="wd-link-red">Syllabus</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                class="fas fa-eye-slash"></i>
+            </div>
+            <div class="wd-paddingtop-10p">
+              <a href="#" class="wd-link-red">Progress Report<br>{EAB Navigate}</a>
+            </div>
+            <div class="wd-paddingtop-10p">
+              <a href="/Kanbas/settings/coursedetails.html" class="wd-link-red">Settings</a>
+            </div>
+          </div>
+          <div class="container.fluid wd-display-flex wd-padding-left-5p wd-padding-right-2p wd-width-100p">
+            <div class="wd-special-flex-direction-row wd-flex-3">
+              <div class="wd-flex-col-container wd-width-100p">
+                <div class="mb-2">
+                  <input type="text" class="wd-search-input" placeholder="Search for Assignment">
+                  <div class="d-flex justify-content-end align-items-center">
+                    <button class="btn btn-secondary d-flex align-items-center">
+                      <i class="fa fa-plus me-1" aria-hidden="true"></i>
+                      Group
+                    </button>&nbsp;
+                    <button class="btn btn-danger d-flex align-items-center">
+                      <i class="fa fa-plus me-1" aria-hidden="true"></i>
+                      Assignment
+                    </button>
+                    <button class="btn btn-link" type="button">
+                      <i class="fas fa-ellipsis-v wd-fontcolor-black"></i>
+                    </button>
+                  </div>
+                </div>
+                <hr>
+                <div class="list-group">
+                  <label class="list-group-item list-group-item-secondary">
+                    <div class="row align-items-center">
+                        <div class="col-10"> 
+                            <i class="fa fa-grip-vertical me-2" aria-hidden="true"></i>
+                            Assignments
+                        </div>
+                        <div class="col-2 text-end"> 
+                          <i class="fa fa-check-circle wd-green-check-circle me-3" aria-hidden="true"></i>
+                          <i class="fa fa-plus me-3" aria-hidden="true"></i>
+                          <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                  </label>
+                  <label class="list-group-item" style="border-left: 5px solid green;">
+                    <div class="row align-items-center">
+                          <div class="col-1"> 
+                              <i class="fa fa-grip-vertical me-2" aria-hidden="true"></i>
+                              <i class="fas fa-edit wd-green-check-circle"></i>
+                          </div>
+                          <div class="col-8"> 
+                            <a href="/Kanbas/assignments/edit.html" class="wd-link-black wd-link-content-bold">A1 SETUP</a>
+                            <br>
+                            <label>Week 0 - SETUP - Week starting on Monday Sep 5 Module |</label>
+                            <br>
+                            <label>Due Sep 18, 2022 at 11.59pm | 100pts</label>
+                          </div>
+                          <div class="col-3 text-end">
+                              <i class="fa fa-check-circle wd-green-check-circle green-check-circle me-3" aria-hidden="true"></i>
+                              <i class="fa fa-ellipsis-v ellipsis-icon" aria-hidden="true"></i>
+                          </div>
+                    </div>
+                  </label>
+                
+                  <label class="list-group-item" style="border-left: 5px solid green;">
+                    <div class="row align-items-center">
+                          <div class="col-1"> 
+                              <i class="fa fa-grip-vertical me-2" aria-hidden="true"></i>
+                              <i class="fas fa-edit wd-green-check-circle"></i>
+                          </div>
+                          <div class="col-8"> 
+                            <a href="/Kanbas/assignments/edit2.html" class="wd-link-black wd-link-content-bold">A2 HTML</a>
+                            <br>
+                            <label>Week 1 - HTML - Week starting on Monday Sep 5 Module |</label>
+                            <br>
+                            <label>Due Sep 18, 2022 at 11.59pm | 100pts</label>
+                          </div>
+                          <div class="col-3 text-end">
+                              <i class="fa fa-check-circle wd-green-check-circle green-check-circle me-3" aria-hidden="true"></i>
+                              <i class="fa fa-ellipsis-v ellipsis-icon" aria-hidden="true"></i>
+                          </div>
+                    </div>
+                  </label>
+                
+                  <label class="list-group-item" style="border-left: 5px solid green;">
+                    <div class="row align-items-center">
+                          <div class="col-1"> 
+                              <i class="fa fa-grip-vertical me-2" aria-hidden="true"></i>
+                              <i class="fas fa-edit wd-green-check-circle"></i>
+                          </div>
+                          <div class="col-8"> 
+                            <a href="/Kanbas/assignments/edit3.html" class="wd-link-black wd-link-content-bold">A3 CSS</a>
+                            <br>
+                            <label>Week 2 - CSS - Week starting on Monday Sep 5 Module |</label>
+                            <br>
+                            <label>Due Sep 18, 2022 at 11.59pm | 100pts</label>
+                          </div>
+                          <div class="col-3 text-end">
+                              <i class="fa fa-check-circle wd-green-check-circle green-check-circle me-3" aria-hidden="true"></i>
+                              <i class="fa fa-ellipsis-v ellipsis-icon" aria-hidden="true"></i>
+                          </div>
+                    </div>
+                  </label>
+
+                <label class="list-group-item" style="border-left: 5px solid green;">
+                    <div class="row align-items-center">
+                          <div class="col-1"> 
+                              <i class="fa fa-grip-vertical me-2" aria-hidden="true"></i>
+                              <i class="fas fa-edit wd-green-check-circle"></i>
+                          </div>
+                          <div class="col-8"> 
+                            <a href="/Kanbas/assignments/edit4.html" class="wd-link-black wd-link-content-bold">A4 BOOTSTRAP</a>
+                            <br>
+                            <label>Week 3 - BOOTSTRAP - Week starting on Monday Sep 5 Module |</label>
+                            <br>
+                            <label>Due Sep 18, 2022 at 11.59pm | 100pts</label>
+                          </div>
+                          <div class="col-3 text-end">
+                              <i class="fa fa-check-circle wd-green-check-circle green-check-circle me-3" aria-hidden="true"></i>
+                              <i class="fa fa-ellipsis-v ellipsis-icon" aria-hidden="true"></i>
+                          </div>
+                    </div>
+                  </label>
+                
+                  <label class="list-group-item" style="border-left: 5px solid green;">
+                    <div class="row align-items-center">
+                          <div class="col-1"> 
+                              <i class="fa fa-grip-vertical me-2" aria-hidden="true"></i>
+                              <i class="fas fa-edit wd-green-check-circle"></i>
+                          </div>
+                          <div class="col-8"> 
+                            <a href="/Kanbas/assignments/edit5.html" class="wd-link-black wd-link-content-bold">A5 JAVASCRIPT</a>
+                            <br>
+                            <label>Week 4 - JAVASCRIPT - Week starting on Monday Sep 5 Module |</label>
+                            <br>
+                            <label>Due Sep 18, 2022 at 11.59pm | 100pts</label>
+                          </div>
+                          <div class="col-3 text-end">
+                              <i class="fa fa-check-circle wd-green-check-circle green-check-circle me-3" aria-hidden="true"></i>
+                              <i class="fa fa-ellipsis-v ellipsis-icon" aria-hidden="true"></i>
+                          </div>
+                    </div>
+                  </label>
+                
+                  <label class="list-group-item" style="border-left: 5px solid green;">
+                    <div class="row align-items-center">
+                          <div class="col-1"> 
+                              <i class="fa fa-grip-vertical me-2" aria-hidden="true"></i>
+                              <i class="fas fa-edit wd-green-check-circle"></i>
+                          </div>
+                          <div class="col-8"> 
+                            <a href="/Kanbas/assignments/edit6.html" class="wd-link-black wd-link-content-bold">A6 REACT</a>
+                            <br>
+                            <label>Week 5 - React - Week starting on Monday Sep 5 Module |</label>
+                            <br>
+                            <label>Due Sep 18, 2022 at 11.59pm | 100pts</label>
+                          </div>
+                          <div class="col-3 text-end">
+                              <i class="fa fa-check-circle wd-green-check-circle green-check-circle me-3" aria-hidden="true"></i>
+                              <i class="fa fa-ellipsis-v ellipsis-icon" aria-hidden="true"></i>
+                          </div>
+                    </div>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="wd-flex-1 d-none">
+              <div class="wd-padding-left-15p">      
+                <div>
+                  <label>Course Status</label>
+                  <div class="d-flex align-items-center">
+                    <button class="btn btn-secondary me-2">Unpublish</button>
+                    <button class="btn btn-success disabled d-flex align-items-center">
+                        <i class="fa fa-check-circle me-1" aria-hidden="true"></i>
+                        Published
+                    </button>
+                </div>                                
+                </div>
+                <div class="d-flex flex-column wd-paddingtop-6p">
+                  <button class="btn btn-secondary mb-1">Import Existing Content</button>
+                  <button class="btn btn-secondary mb-1">Import From Commons</button>
+                  <button class="btn btn-secondary mb-1">Choose Home Page</button>
+                  <button class="btn btn-secondary mb-1">View Course Stream</button>
+                  <button class="btn btn-secondary mb-1">New Announcements</button>
+                  <button class="btn btn-secondary mb-1">New Analytics</button>
+                  <button class="btn btn-secondary mb-1">View Course Notifications</button>
+              </div>
+                <br>
+                <label>To Do</label>
+                <hr>
+                <a href="#" class="text-decoration-none text-danger">Grade A1 - ENV + HTML</a>
+                <br>
+                <label class="wd-leftnav-fontsize-12px">100 points . Sep 18 at 11.59pm</label>
+                <br>
+                <br>
+                <label>Coming Up</label>&nbsp; <i class="fas fa-calendar"></i> <a href="#" class="text-decoration-none text-danger float-end">View Calendar</a>
+
+                <hr>
+
+                <div>
+                    <i class="fas fa-calendar"></i>
+                    <a href="#" class="text-decoration-none text-danger">Lecture</a>
+                    <br>
+                    <label class="wd-leftnav-fontsize-12px">CS5550.1245.2345678 Sep 10 at 12:25pm</label>
+                    <br>
+                    <br>
+                    <i class="fas fa-calendar"></i>
+                    <a href="#" class="text-decoration-none text-danger">Lecture</a>
+                    <br>
+                    <label class="wd-leftnav-fontsize-12px">CS5550.1245.2345678 Sep 11 at 2:25pm</label>
+                    <br>
+                    <br>
+                    <i class="fas fa-calendar"></i>
+                    <a href="#" class="text-decoration-none text-danger">CS5550.1245.2345678 Lecture</a>
+                    <br>
+                    <label class="wd-leftnav-fontsize-12px">CS5550.1245.2345678 Sep 10 at 7pm</label>
+                </div>
+            </div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

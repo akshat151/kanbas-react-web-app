@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanbas Navigation Sidebar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"> <!-- FontAwesome CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> <!-- Bootstrap CSS -->
+    <style>
+        /* Custom CSS */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .sidebar {
+            width: 85px; /* Width of the sidebar */
+            background-color: #000; /* Black background */
+            position: fixed;
+            height: 100%;
+            padding-top: 20px; /* Adjust the padding as needed */
+        }
+
+        .sidebar a {
+            padding: 5px 10px; /* Spacing around the links */
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px; /* Font size and style */
+            color: #fff; /* White text */
+            display: block;
+        }
+
+        .sidebar a.active {
+            background-color: #fff; /* White background for active links */
+            color: #ff0000; /* Red text for active links */
+        }
+
+        .sidebar a:hover {
+            background-color: #fff; /* White background on hover */
+            color: #ff0000; /* Red text on hover */
+        }
+
+        .sidebar .account-icon {
+            color: #fff; /* White color for the account icon */
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <a href="#" class="active"><i class="fas fa-tachometer-alt"></i><br>Dashboard</a>
+        <a href="#"><i class="fas fa-users"></i><br>Users</a>
+        <a href="#"><i class="fas fa-chart-bar"></i><br>Reports</a>
+        <a href="#"><i class="fas fa-cog"></i><br>Settings</a>
+        <a href="#" class="account-icon"><i class="fas fa-user"></i><br>Account</a>
+    </div>
+    <!-- Content goes here -->
+</body>
+</html>
