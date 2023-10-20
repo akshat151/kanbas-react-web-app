@@ -22,7 +22,7 @@ const Dashboard = () => {
                 <img src={course.image} className="card-img-top" alt={course.name} />
                 <div className="card-body">
                   <h5 className="card-title">
-                    <a href="#">{course.number} {course.name}</a>
+                    <a href={course.url}>{course.number} {course.name}</a>
                   </h5>
                   <p className="card-text">
                     {course.number} {course.name}<br />
