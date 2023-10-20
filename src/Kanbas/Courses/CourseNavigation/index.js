@@ -13,8 +13,11 @@ function CourseNavigation() {
           className={`list-group-item ${pathname.includes(link) && "active"}`}
         >
           {link}
+
         </Link>
-      ))}{" "}
+
+      ))}
+      
     </div>
   );
 }
