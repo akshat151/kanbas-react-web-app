@@ -13,9 +13,22 @@ function Assignments() {
     <div>
       <div className="row">
         <ul className="list-group">
+        <li className="list-group-item list-group-item-secondary">
+            <i className="fas fa-grip-vertical p-2 m-1"></i>
+            <i className="fa-solid fa-caret-down p-2"></i>{" "}
+            <strong>Assignments</strong>
+            <i className="fa-solid fa-ellipsis-vertical black float-end p-2 m-1"></i>
+            <i className="fa-solid fa-plus grey float-end p-2 m-1"></i>
+            <button
+              type="button"
+              className="btn btn-outline-secondary float-end"
+            >
+              40% of total
+            </button>
+          </li>
           {courseAssignments.map((assignment, index) => {
-            const weekNumber = index; // Week number
-            const weekDescription = `Week ${weekNumber} - ${assignment.description}`; // Dynamic description
+            const weekNumber = index;
+            const weekDescription = `Week ${weekNumber} - ${assignment.description}`; 
 
             return (
               <li className="list-group-item container-fluid p-0 m-0 wd-green-border" key={assignment._id}>
