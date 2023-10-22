@@ -15,7 +15,9 @@ function CourseNavigation() {
   console.log(pathname);
   return (
     <div className="wd-navigation-element">
-      <div className="wd-note pb-2"></div>
+      <div className="wd-note pb-2">
+      <label class="wd-card-text-courses">202410_1 Fall 2023 Semester...</label>
+      </div>
       {links.map((link, index) => (
         <Link
           key={index}
