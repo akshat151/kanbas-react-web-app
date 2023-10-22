@@ -1,39 +1,69 @@
 import React from "react";
-import coursesData from "../Database/courses.json";
+import { Link } from "react-router-dom";
+import coursesData from "../Database";
+import "./dashboardIndex.css";
 
 const Dashboard = () => {
-  const courses = coursesData;
-
+  const courses = coursesData.courses;
+  const colors = ["darkblue", "cyan", "red"];
   return (
     <div className="container-fluid wd-paddingtop-20px wd-padding-left-3p wd-padding-right-3p wd-width-100p">
-      <div className="wd-flex-col-container wd-width-100p">
-        <div>
-          <span className="wd-font-size-30px">Dashboard</span>
-          <hr />
+      <div className="row d-flex flex-row flex-wrap pb-0">
+        <div className="col col-sm-12 col-xl-8 col-md-10 wd-dashboard-header-text">Dashboard</div>
+      </div>
+      <div className="row d-flex flex-row flex-wrap pb-0">
+        <div className="col col-sm-11 col-xl-11 col-md-11">
+          <hr className="m-2 font-weight" />
         </div>
-        <div>
-          <span className="wd-font-size-25px">Published Courses ({courses.length})</span>
-          <hr />
+      </div>
+      <div className="row d-flex flex-row flex-wrap mt-2">
+        <div className="wd-dashboard-sub-header-text col-sm-11 col-md-11 col-xl-11">
+          Published Courses(7)
         </div>
-        <div className="row wd-course-container">
-          {courses.map((course) => (
-            <div className="col-12 col-md-6 col-lg-4 col-xl-3" key={course._id}>
-              <div className="wd-course-card card">
-                <img src={course.image} className="card-img-top" alt={course.name} />
+        <div className="wd-dashboard-sub-header-text col col-sm-10 col-xl-10 col-md-10">
+          <hr className="m-1 font-weight" />
+        </div>
+      </div>
+      <div className="container-fluid">
+        <div
+          className="d-flex flex-row flex-wrap row"
+          style={{ margin: "1rem" }}
+        >
+          {courses.map((course, index) => {
+            const colorIndex = index % colors.length;
+            const color = colors[colorIndex];
+            return (
+              <div className="card wd-course-card m-5 p-0">
+                <div
+                  className="wd-card-image-container"
+                  style={{ background: `${color}` }}
+                >
+                  <div className="float-end">
+                    <div className="wd-course-card-ellipses p-1">
+                      <i className="fa-solid fa-ellipsis-vertical wd-color-white p-2"></i>
+                    </div>
+                  </div>
+                </div>
                 <div className="card-body">
-                  <h5 className="card-title">
-                    <a href={course.url}>{course.number} {course.name}</a>
-                  </h5>
-                  <p className="card-text">
-                    {course.number} {course.name}<br />
-                    Start Date: {course.startDate}<br />
-                    End Date: {course.endDate}
+                  <Link
+                    key={course._id}
+                    to={`/Kanbas/Courses/${course._id}`}
+                    className="list-group-item wd-card-header"
+                  >
+                    {course.number} {course.name}{" "}
+                    <span className="wd-col-red">...</span>
+                  </Link>
+                  <p className="card-subtitle text-body-secondary">
+                    {course.number}.12631.{course.endDate}
                   </p>
-                  <i className="fas fa-pencil-alt"></i>
+                  <p className="card-text wd-card-text">
+                    202410_1 Fall 2023 Semester
+                  </p>
+                  <i className="fa-solid fa-file-pen fa-lg wd-light-grey p-2"></i>
                 </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </div>

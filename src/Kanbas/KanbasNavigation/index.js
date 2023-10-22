@@ -41,7 +41,7 @@ function KanbasNavigation() {
   const { pathname } = useLocation();
 
   return (
-    <div className="container.fluid d-none d-sm-block wd-width-75px wd-center-text">
+    <div className="container.fluid d-none d-sm-none d-md-block wd-width-75px wd-center-text">
       <div className="wd-flex-col-container wd-width-75px wd-darkbg-height">
         <div className="wd-paddingtop-10p wd-paddingbottom-10p">
           <i className="wd-fontcolor-red fab fa-neos fa-3x"></i>
@@ -50,9 +50,8 @@ function KanbasNavigation() {
           <Link
             key={index}
             to={`/Kanbas/${link}`}
-            className={`wd-link-white wd-paddingtop-6p wd-paddingbottom-6p ${
-              pathname.includes(link) ? "wd-lightbg" : ""
-            }`}
+            className={`wd-link-white wd-paddingtop-6p wd-paddingbottom-6p ${pathname.includes(link) ? "wd-lightbg" : ""
+              }`}
           >
             <div className={`wd-paddingtop-6p wd-fontcolor-red ${icons[index]} fa-2x`}></div>
             <br />
