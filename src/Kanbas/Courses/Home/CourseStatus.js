@@ -44,7 +44,7 @@ function CourseStatus() {
                     </div>
                 </div>
 
-                <label class="module-title"><h5><strong>Coming Up</strong></h5></label>&nbsp; <a href="#" class="text-decoration-none text-black float-end"><i className="fa-regular fa-calendar-plus"></i><span className="wd-custom-font p-1">View calender</span></a>
+                <label class="module-title"><h5><strong>Coming Up</strong></h5></label>&nbsp;  <label class="text-decoration-none text-black float-end"><i className="fa-regular fa-calendar-plus"></i><span className="wd-custom-font p-1">View calender</span></label>
                 <hr />
                 <div className="container-fluid">
                     <div className="row p-3">
