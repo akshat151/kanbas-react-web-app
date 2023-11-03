@@ -11,13 +11,6 @@ import db from "./Database";
 import store from "./store";
 import { Provider } from "react-redux";
 
-// const initialCourseState = {
-//   name: "New Course",
-//   number: "New Number",
-//   startDate: "2023-09-10",
-//   endDate: "2023-12-15",
-// };
-
 function Kanbas() {
   const [courses, setCourses] = useState(db.courses);
   const [course, setCourse] = useState({
