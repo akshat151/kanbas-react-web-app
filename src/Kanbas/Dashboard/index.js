@@ -1,13 +1,20 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import coursesData from "../Database";
 import "./dashboardIndex.css";
+import CourseForm from "./CourseForm";
+import CourseItem from "./CourseItem";
 
-const Dashboard = () => {
-  const courses = coursesData.courses;
+const Dashboard = ({
+  courses,
+  course,
+  setCourse,
+  addCourse,
+  deleteCourse,
+  updateCourse
+}) => {
   const colors = ["darkblue", "cyan", "red"];
   return (
-    <div className="container-fluid wd-paddingtop-20px wd-padding-left-3p wd-padding-right-3p wd-width-100p">
+    <div className="container-fluid">
       <div className="row d-flex flex-row flex-wrap pb-0">
         <div className="col col-sm-12 col-xl-8 col-md-10 wd-dashboard-header-text">Dashboard</div>
       </div>
@@ -18,7 +25,7 @@ const Dashboard = () => {
       </div>
       <div className="row d-flex flex-row flex-wrap mt-2">
         <div className="wd-dashboard-sub-header-text col-sm-11 col-md-11 col-xl-11">
-          Published Courses(7)
+          Published Courses({courses.length})
         </div>
         <div className="wd-dashboard-sub-header-text col col-sm-10 col-xl-10 col-md-10">
           <hr className="m-1 font-weight" />
@@ -29,6 +36,12 @@ const Dashboard = () => {
           className="d-flex flex-row flex-wrap row"
           style={{ margin: "1rem" }}
         >
+          <CourseForm
+            course={course}
+            setCourse={setCourse}
+            addCourse={addCourse}
+            updateCourse={updateCourse}
+          />
           {courses.map((course, index) => {
             const colorIndex = index % colors.length;
             const color = colors[colorIndex];
@@ -59,7 +72,11 @@ const Dashboard = () => {
                   <p className="card-text wd-card-text">
                     202410_1 Fall 2023 Semester
                   </p>
-                  <i className="fa-solid fa-file-pen fa-lg wd-light-grey p-2"></i>
+                  <CourseItem
+                    course={course}
+                    deleteCourse={deleteCourse}
+                    setCourse={setCourse}
+                  />
                 </div>
               </div>
             );

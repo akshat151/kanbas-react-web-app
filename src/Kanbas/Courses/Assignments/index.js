@@ -1,10 +1,15 @@
-import React from "react";
+import React, {useState} from "react";
 import { Link, useParams } from "react-router-dom";
 import db from "../../Database";
 
 function Assignments() {
   const { courseId } = useParams();
-  const assignments = db.assignments;
+  const [assignments, setAssignments] = useState(db.assignments);
+
+  const deleteAssignment = (assignmentId) => {
+    setAssignments(assignments.filter((assignment) => assignment._id !== assignmentId));
+  };
+  
   const courseAssignments = assignments.filter(
     (assignment) => assignment.course === courseId
   );
@@ -13,7 +18,7 @@ function Assignments() {
     <div>
       <div className="row">
         <ul className="list-group">
-        <li className="list-group-item list-group-item-secondary">
+          <li className="list-group-item list-group-item-secondary">
             <i className="fas fa-grip-vertical p-2 m-1"></i>
             <i className="fa-solid fa-caret-down p-2"></i>{" "}
             <strong>Assignments</strong>
@@ -28,7 +33,7 @@ function Assignments() {
           </li>
           {courseAssignments.map((assignment, index) => {
             const weekNumber = index;
-            const weekDescription = `Week ${weekNumber} - ${assignment.description}`; 
+            const weekDescription = `Week ${weekNumber} - ${assignment.description}`;
 
             return (
               <li className="list-group-item container-fluid p-0 m-0 wd-green-border" key={assignment._id}>
@@ -37,7 +42,7 @@ function Assignments() {
                     <i className="fas fa-grip-vertical wd-custom-margin"></i>
                     <i className="fa-solid fa-book wd-color-green wd-custom-margin"></i>
                   </div>
-                  <div className="col-10 p-0 m-0 pt-2 pb-2">
+                  <div className="col-9 p-0 m-0 pt-2 pb-2">
                     <div className="wd-assignment-custom-font">
                       <Link
                         key={assignment._id}
@@ -52,9 +57,10 @@ function Assignments() {
                       </p>
                     </div>
                   </div>
-                  <div className="col-1 p-0 m-0 text-center">
-                    <i className="fa-solid fa-check-circle wd-color-green wd-custom-margin"></i>
-                    <i className="fa-solid fa-ellipsis-vertical black ma-050 wd-custom-margin"></i>
+                  <div className="d-flex flex-row col-1">
+                    <i className="fa-solid mt-2 fa-check-circle wd-color-green wd-custom-margin"></i>
+                    <i className="fa-solid mt-2 fa-ellipsis-vertical black ma-050 wd-custom-margin"></i>
+                    <button className="btn btn-danger" onClick={() => deleteAssignment(assignment._id)} >Delete</button>
                   </div>
                 </div>
               </li>
