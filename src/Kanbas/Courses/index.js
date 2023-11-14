@@ -45,7 +45,6 @@ function Courses({courses}) {
                           </Link>
                           </>} />
                         <Route path="Grades" element={<>Grades</>} />
-                        <Route path="Grades" element={<>Grades</>} />
                       </Routes>}
                   </li>
                 </ol>
