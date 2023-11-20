@@ -3,7 +3,7 @@ import axios from "axios";
 const COURSES_URL = "http://localhost:4000/api/courses";
 const MODULES_URL = "http://localhost:4000/api/modules";
 
-export const addModule = async (courseId, module) => {
+export const addCourseModule = async (courseId, module) => {
   const response = await axios.post(
     `${COURSES_URL}/${courseId}/modules`,
     module
@@ -16,12 +16,12 @@ export const findModulesForCourse = async (courseId) => {
   return response.data;
 };
 
-export const updateModule = async (moduleId, module) => {
-  const response = await axios.put(`${MODULES_URL}/${moduleId}`, module);
+export const updateCourseModule = async (module) => {
+  const response = await axios.put(`${MODULES_URL}/${module._id}`, module);
   return response.data;
 };
 
-export const deleteModule = async (moduleId) => {
+export const deleteCourseModule = async (moduleId) => {
   const response = await axios.delete(`${MODULES_URL}/${moduleId}`);
   return response.data;
 };
