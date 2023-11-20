@@ -11,13 +11,22 @@ import Assignments from "./Assignments";
 import AssignmentEditor from "./Assignments/AssignmentEditor";
 import AssignmentName from "./Assignments/AssignmentEditor/AssignmentName";
 import AssignmentEditorButtons from "./Assignments/AssignmentEditor/AssignmentEditorButtons";
+import * as client from "./client";
+import React, { useState, useEffect } from "react";
 
-function Courses({courses}) {
+
+function Courses() {
   const { courseId } = useParams();
   const { pathname } = useLocation();
-  const array = pathname.split("/");
-  console.log(array);
-  const course = courses.find((course) => course._id === courseId);
+  const [course, setCourse] = useState({});
+  const fetchCourse = async () => {
+    const course = await client.fetchCourse(courseId);
+    setCourse(course);
+  };
+
+  useEffect(() => {
+    fetchCourse();
+  }, []);
   return (
     <div className="wd-scrollable">
       <div className="wd-main-account-page">

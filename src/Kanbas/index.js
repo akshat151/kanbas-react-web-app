@@ -8,7 +8,7 @@ import Dashboard from "./Dashboard";
 import Courses from "./Courses";
 import store from "./store";
 import { Provider } from "react-redux";
-import axios from "axios";
+import * as client from "./Courses/client";
 
 function Kanbas() {
   const [courses, setCourses] = useState([]);
@@ -19,31 +19,37 @@ function Kanbas() {
     endDate: "2023-12-15",
   });
 
-  useEffect(() => {
-    const fetchCourses = async () => {
-      const response = await axios.get("http://localhost:4000/api/courses");
-      setCourses(response.data);
-    };
-
-    fetchCourses();
-  }, []);
-
-  const addCourse = async () => {
-    const response = await axios.post("http://localhost:4000/api/courses", course);
-    setCourses([...courses, response.data]);
+  const fetchCourses = async () => {
+    const courses = await client.fetchCourses();
+    setCourses(courses);
   };
 
-  const deleteCourse = async (courseId) => {
-    await axios.delete(`http://localhost:4000/api/courses/${courseId}`);
-    setCourses(courses.filter((course) => course._id !== courseId));
+  const deleteCourse = async (id) => {
+    try {
+      await client.deleteCourse(id);
+      setCourses(courses.filter((course) => course._id !== id));
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   const updateCourse = async () => {
-    await axios.put(`http://localhost:4000/api/courses/${course._id}`, course);
-    setCourses(
-      courses.map((c) => (c._id === course._id ? course : c))
-    );
+    try {
+      await client.updateCourse(course);
+      setCourses(courses.map((c) => (c._id === course._id ? course : c)));
+    } catch (error) {
+      console.log(error);
+    }
   };
+
+  const addCourse = async () => {
+    const newCourse = await client.addCourse(course);
+    setCourses([newCourse, ...courses]);
+  };
+
+  useEffect(() => {
+    fetchCourses();
+  }, []);
 
   return (
     <Provider store={store}>
@@ -66,7 +72,7 @@ function Kanbas() {
                 />
               }
             />
-            <Route path="Courses/:courseId/*" element={<Courses courses={courses} />} />
+            <Route path="Courses/:courseId/*" element={<Courses/>} />
           </Routes>
         </div>
       </div>
