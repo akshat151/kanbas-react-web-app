@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 import axios from "axios";
-
 
 function WorkingWithObjects() {
   const [assignment, setAssignment] = useState({
@@ -12,25 +11,50 @@ function WorkingWithObjects() {
     score: 0,
   });
   const URL = `${process.env.REACT_APP_BASE_URL}/a5/assignment`;
-  const fetchAssignment = async () => {
-    const response = await axios.get(`${URL}`);
-    setAssignment(response.data);
-  };
+
+  const fetchAssignment = useCallback(async () => {
+    try {
+      const response = await axios.get(URL);
+      setAssignment((prevAssignment) => ({ ...prevAssignment, ...response.data }));
+    } catch (error) {
+      console.error("Error fetching assignment:", error.message);
+    }
+  }, [URL]);
+
   const updateTitle = async () => {
-    const response = await axios.get(`${URL}/title/${assignment.title}`);
-    setAssignment(response.data);
+    try {
+      const response = await axios.get(`${URL}/title/${assignment.title}`);
+      setAssignment(response.data);
+    } catch (error) {
+      console.error("Error updating title:", error.message);
+    }
   };
+
   const updateCompleted = async () => {
-    const response = await axios.get(`${URL}/completed/${assignment.completed}`);
-    setAssignment(response.data);
+    try {
+      const response = await axios.get(`${URL}/completed/${assignment.completed}`);
+      setAssignment(response.data);
+    } catch (error) {
+      console.error("Error updating completed:", error.message);
+    }
   };
+
   const updateScore = async () => {
-    const response = await axios.get(`${URL}/score/${assignment.score}`);
-    setAssignment(response.data);
+    try {
+      const response = await axios.get(`${URL}/score/${assignment.score}`);
+      setAssignment(response.data);
+    } catch (error) {
+      console.error("Error updating score:", error.message);
+    }
   };
+
   useEffect(() => {
-    fetchAssignment();
-  }, []);
+    const fetchData = async () => {
+      await fetchAssignment();
+    };
+
+    fetchData();
+  }, [fetchAssignment]);
 
   return (
     <div>
@@ -74,23 +98,20 @@ function WorkingWithObjects() {
         className="form-control mb-2 w-75"
         type="text"
       />
-      <button onClick={updateTitle}
-              className="w-100 btn btn-primary mb-2">
+      <button onClick={updateTitle} className="w-100 btn btn-primary mb-2">
         Update Title to: {assignment.title}
       </button>
-      <button onClick={updateScore}
-              className="w-100 btn btn-primary mb-2">
+      <button onClick={updateScore} className="w-100 btn btn-primary mb-2">
         Update Score to: {assignment.score}
       </button>
-      <button onClick={updateCompleted}
-              className="w-100 btn btn-primary mb-2">
+      <button onClick={updateCompleted} className="w-100 btn btn-primary mb-2">
         Update Title to: {assignment.completed}
       </button>
-      <button onClick={fetchAssignment}
-              className="w-100 btn btn-danger mb-2">
+      <button onClick={fetchAssignment} className="w-100 btn btn-danger mb-2">
         Fetch Assignment
       </button>
     </div>
   );
 }
+
 export default WorkingWithObjects;

@@ -1,18 +1,75 @@
-import React, {useState} from "react";
+import React, {useEffect} from "react";
 import { Link, useParams } from "react-router-dom";
-import db from "../../Database";
+import {
+  findAssignmentsForCourse,
+  addCourseAssignment,
+  deleteCourseAssignment,
+  updateCourseAssignment,
+} from "./client";
+
+import { useSelector, useDispatch } from "react-redux";
+import {
+  addAssignment,
+  deleteAssignment,
+  updateAssignment,
+  setAssignments,
+  // eslint-disable-next-line
+  setAssignment,
+} from "./assignmentsReducer";
 
 function Assignments() {
   const { courseId } = useParams();
-  const [assignments, setAssignments] = useState(db.assignments);
+  const assignments = useSelector((state) => state.assignments.assignments);
+  const assignment = useSelector((state) => state.assignments.assignment);
+  const dispatch = useDispatch();
 
-  const deleteAssignment = (assignmentId) => {
-    setAssignments(assignments.filter((assignment) => assignment._id !== assignmentId));
+  // eslint-disable-next-line
+  const handleAddAssignment = async () => {
+    try {
+      const newAssignment = await addCourseAssignment(courseId, assignment);
+      dispatch(addAssignment(newAssignment));
+    } catch (error) {
+      console.error("Error adding assignment:", error);
+    }
   };
-  
+
+  const handleDeleteAssignment = async (assignmentId) => {
+    try {
+      await deleteCourseAssignment(assignmentId);
+      dispatch(deleteAssignment(assignmentId));
+    } catch (error) {
+      console.error("Error deleting assignment:", error);
+    }
+  };
+
+  // eslint-disable-next-line
+  const handleUpdateAssignment = async () => {
+    try {
+      await updateCourseAssignment(assignment);
+      dispatch(updateAssignment(assignment));
+    } catch (error) {
+      console.error("Error updating assignment:", error);
+    }
+  };
+
+  useEffect(() => {
+    const fetchAssignments = async () => {
+      try {
+        const assignmentsData = await findAssignmentsForCourse(courseId);
+        dispatch(setAssignments(assignmentsData));
+      } catch (error) {
+        console.error("Error fetching assignments:", error);
+      }
+    };
+
+    fetchAssignments();
+  }, [courseId, dispatch]);
+
   const courseAssignments = assignments.filter(
     (assignment) => assignment.course === courseId
   );
+
+
 
   return (
     <div>
@@ -60,7 +117,7 @@ function Assignments() {
                   <div className="d-flex flex-row col-1">
                     <i className="fa-solid mt-2 fa-check-circle wd-color-green wd-custom-margin"></i>
                     <i className="fa-solid mt-2 fa-ellipsis-vertical black ma-050 wd-custom-margin"></i>
-                    <button className="btn btn-danger" onClick={() => deleteAssignment(assignment._id)} >Delete</button>
+                    <button className="btn btn-danger"  onClick={() => handleDeleteAssignment(assignment._id)} >Delete</button>
                   </div>
                 </div>
               </li>

@@ -5,20 +5,43 @@ function EncodingParametersInURLs() {
   const [a, setA] = useState(34);
   const [b, setB] = useState(23);
   const [welcome, setWelcome] = useState("");
+  // eslint-disable-next-line
+  const [errorWelcome, setErrorWelcome] = useState(null);
   const fetchWelcome = async () => {
-    const response = await axios.get(`${process.env.REACT_APP_BASE_URL}/a5/welcome`);
-    setWelcome(response.data);
+    try {
+      const response = await axios.get(`${process.env.REACT_APP_BASE_URL}/a5/welcome`);
+      setWelcome(response.data);
+    } catch (error) {
+      console.error(error);
+      setErrorWelcome("Error fetching welcome message");
+    }
   };
+
   const [result, setResult] = useState(0);
+  // eslint-disable-next-line
+  const [errorSum, setErrorSum] = useState(null);
   const fetchSum = async (a, b) => {
-    const response = await axios.get(`${process.env.REACT_APP_BASE_URL}/a5/add/${a}/${b}`);
-    setResult(response.data);
+    try {
+      const response = await axios.get(`${process.env.REACT_APP_BASE_URL}/a5/add/${a}/${b}`);
+      setResult(response.data);
+    } catch (error) {
+      console.error(error);
+      setErrorSum("Error fetching sum");
+    }
   };
+
+  // eslint-disable-next-line
+  const [errorSubtraction, setErrorSubtraction] = useState(null);
   const fetchSubtraction = async (a, b) => {
-    const response = await axios.get(
-      `${process.env.REACT_APP_BASE_URL}/a5/subtract/${a}/${b}`
-    );
-    setResult(response.data);
+    try {
+      const response = await axios.get(
+        `${process.env.REACT_APP_BASE_URL}/a5/subtract/${a}/${b}`
+      );
+      setResult(response.data);
+    } catch (error) {
+      console.error(error);
+      setErrorSubtraction("Error fetching subtraction");
+    }
   };
 
   useEffect(() => {

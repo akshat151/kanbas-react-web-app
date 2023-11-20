@@ -15,8 +15,8 @@ import {
 function ModuleList() {
     const {courseId} = useParams();
     const {pathname} = useLocation();
-    const modules = useSelector((state) => state.modulesReducer.modules);
-    const module = useSelector((state) => state.modulesReducer.module);
+    const modules = useSelector((state) => state.modules.modules);
+    const module = useSelector((state) => state.modules.module);
     const dispatch = useDispatch();
     const handleAddModule = () => {
         addCourseModule(courseId, module).then((module) => {

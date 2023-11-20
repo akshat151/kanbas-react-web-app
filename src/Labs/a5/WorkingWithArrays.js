@@ -1,6 +1,5 @@
 import axios from "axios";
-import { useEffect, useState } from "react";
-
+import { useEffect, useState, useCallback } from "react";
 
 function WorkingWithArrays() {
   const API = `${process.env.REACT_APP_BASE_URL}/a5/todos`;
@@ -15,26 +14,53 @@ function WorkingWithArrays() {
   });
 
   const [todos, setTodos] = useState([]);
+  // eslint-disable-next-line
+  const [errorMessage, setErrorMessage] = useState(null);
+
   const postTodo = async () => {
-    const response = await axios.post(API, todo);
-    setTodos([...todos, response.data]);
+    try {
+      const response = await axios.post(API, todo);
+      setTodos([...todos, response.data]);
+    } catch (error) {
+      console.log(error);
+      setErrorMessage(error.response.data.message);
+    }
   };
-  const fetchTodos = async () => {
-    const response = await axios.get(API);
-    setTodos(response.data);
-  };
+
+  const fetchTodos = useCallback(async () => {
+    try {
+      const response = await axios.get(API);
+      setTodos(response.data);
+    } catch (error) {
+      console.log(error);
+      setErrorMessage(error.response.data.message);
+    }
+  }, [API]); // Include API in the dependency array
+
   const fetchTodoById = async (id) => {
-    const response = await axios.get(`${API}/${id}`);
-    setTodo(response.data);
+    try {
+      const response = await axios.get(`${API}/${id}`);
+      setTodo(response.data);
+    } catch (error) {
+      console.log(error);
+      setErrorMessage(error.response.data.message);
+    }
   };
+
   const deleteTodo = async (todo) => {
-    await axios.delete(`${API}/${todo.id}`);
-    setTodos(todos.filter((t) => t.id !== todo.id));
+    try {
+      await axios.delete(`${API}/${todo.id}`);
+      setTodos(todos.filter((t) => t.id !== todo.id));
+    } catch (error) {
+      console.log(error);
+      setErrorMessage(error.response.data.message);
+    }
   };
 
   useEffect(() => {
     fetchTodos();
-  }, []);
+  }, [fetchTodos]);
+  
   return (
     <div>
       <h2>Working with Arrays</h2>
