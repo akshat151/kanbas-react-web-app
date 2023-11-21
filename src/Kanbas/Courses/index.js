@@ -26,7 +26,7 @@ function Courses() {
 
   useEffect(() => {
     fetchCourse();
-  }, []);
+  }, [fetchCourse]);
   return (
     <div className="wd-scrollable">
       <div className="wd-main-account-page">
