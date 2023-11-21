@@ -12,17 +12,17 @@ import AssignmentEditor from "./Assignments/AssignmentEditor";
 import AssignmentName from "./Assignments/AssignmentEditor/AssignmentName";
 import AssignmentEditorButtons from "./Assignments/AssignmentEditor/AssignmentEditorButtons";
 import * as client from "./client";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 
 
 function Courses() {
   const { courseId } = useParams();
   const { pathname } = useLocation();
   const [course, setCourse] = useState({});
-  const fetchCourse = async () => {
-    const course = await client.fetchCourse(courseId);
-    setCourse(course);
-  };
+  const fetchCourse = useCallback(async () => {
+    const fetchedCourse = await client.fetchCourse(courseId);
+    setCourse(fetchedCourse);
+  }, [courseId]);
 
   useEffect(() => {
     fetchCourse();
