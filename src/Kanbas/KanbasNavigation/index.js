@@ -42,7 +42,7 @@ function KanbasNavigation() {
 
   return (
     <div className="container.fluid d-none d-sm-none d-md-block wd-width-75px wd-center-text">
-      <div className="wd-flex-col-container wd-width-75px wd-darkbg-height">
+      <div className="wd-flex-col-container wd-width-75px wd-darkbg-height" style={{ overflowY: 'auto' }}>
         <div className="wd-paddingtop-10p wd-paddingbottom-10p">
           <i className="wd-fontcolor-red fab fa-neos fa-3x"></i>
         </div>
