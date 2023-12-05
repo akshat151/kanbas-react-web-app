@@ -1,5 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
-
+import "./index.css";
 function Nav() {
   const { pathname } = useLocation();
   return (
@@ -14,13 +14,13 @@ function Nav() {
         to="/project/search"
         className={`nav-link ${pathname.includes("search") ? "active" : ""}`}
       >
-       Search
+        Search
       </Link>
       <Link
         to="/project/signin"
         className={`nav-link ${pathname.includes("signin") ? "active" : ""}`}
       >
-       Signin
+        Signin
       </Link>
       <Link
         to="/project/signup"
