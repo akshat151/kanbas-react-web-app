@@ -19,7 +19,7 @@ function Account() {
     } else {
       fetchAccount();
     }
-  }, []);
+  }, [id]);
   const save = async () => {
     await client.updateUser(account);
   };
