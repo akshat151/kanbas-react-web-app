@@ -1,71 +1,162 @@
-# kanbas-react-web-app
-# Getting Started with Create React App
+# 🧑‍🏫 KANBAS – FULL STACK WEB APPLICATION
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![MERN](https://img.shields.io/badge/stack-MERN-informational?style=flat&logo=mongodb&logoColor=white&labelColor=4caf50)
+![MongoDB](https://img.shields.io/badge/database-MongoDB-green?logo=mongodb)
+![Express](https://img.shields.io/badge/backend-Express.js-grey?logo=express)
+![React](https://img.shields.io/badge/frontend-React-blue?logo=react)
+![Node.js](https://img.shields.io/badge/runtime-Node.js-green?logo=node-dot-js)
 
-## Available Scripts
+**Kanbas** is a full-stack course management system modeled after Canvas. It includes a fully interactive **React frontend** and a lightweight **Node.js backend API**, using a file-based JSON database. The project is ideal for learning full-stack development, routing, REST APIs, and state management.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 🔗 REPOSITORIES
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- 🔹 **Frontend (React)**: [kanbas-react-web-app](https://github.com/akshat151/kanbas-react-web-app)
+- 🔹 **Backend (Node.js)**: [kanbas-node-server-app](https://github.com/akshat151/kanbas-node-server-app)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## 🧩 FEATURES
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- ✅ Dynamic UI built with React components
+- ✅ Modular routing and data-driven views
+- ✅ Node.js backend with express routes
+- ✅ File-based JSON database (no external DB needed)
+- ✅ Local environment support via `.env`
+- ✅ Clean project separation between frontend and backend
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🗺️ ARCHITECTURE DIAGRAM
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+![Class Diagram](diagram_frontend.png)
+![Class Diagram](diagram_backend.png)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 📁 PROJECT STRUCTURE
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 🔷 Frontend Repo: [`kanbas-react-web-app`](https://github.com/akshat151/kanbas-react-web-app)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+#### 🔹 Client Layer
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- **Browser**
 
-## Learn More
+#### 🔹 Static HTML Layer
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- [index.html (public)](https://github.com/akshat151/kanbas-react-web-app/blob/main/public/index.html)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+#### 🔹 React Bootstrapping Layer
 
-### Code Splitting
+- [index.js (src)](https://github.com/akshat151/kanbas-react-web-app/blob/main/src/index.js)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+#### 🔹 React Application Layer
 
-### Analyzing the Bundle Size
+- [App.js (src)](https://github.com/akshat151/kanbas-react-web-app/blob/main/src/App.js)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+#### 🔹 Static Assets
 
-### Making a Progressive Web App
+- [App.css](https://github.com/akshat151/kanbas-react-web-app/blob/main/src/App.css)  
+- [index.css](https://github.com/akshat151/kanbas-react-web-app/blob/main/src/index.css)  
+- [manifest.json](https://github.com/akshat151/kanbas-react-web-app/blob/main/public/manifest.json)  
+- [robots.txt](https://github.com/akshat151/kanbas-react-web-app/blob/main/public/robots.txt)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+#### 🔹 Testing & Build Setup
 
-### Advanced Configuration
+- [App.test.js](https://github.com/akshat151/kanbas-react-web-app/blob/main/src/App.test.js)  
+- [setupTests.js](https://github.com/akshat151/kanbas-react-web-app/blob/main/src/setupTests.js)  
+- [package.json](https://github.com/akshat151/kanbas-react-web-app/blob/main/package.json)  
+- [package-lock.json](https://github.com/akshat151/kanbas-react-web-app/blob/main/package-lock.json)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+---
 
-### Deployment
+### 🔷 Backend Repo: [`kanbas-node-server-app`](https://github.com/akshat151/kanbas-node-server-app)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+#### 🔹 App Entry & Config
 
-### `npm run build` fails to minify
+- [app.js](https://github.com/akshat151/kanbas-node-server-app/blob/main/app.js)  
+- [.env](https://github.com/akshat151/kanbas-node-server-app/blob/main/.env)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+#### 🔹 API Routes
+
+- [Assignments Routes](https://github.com/akshat151/kanbas-node-server-app/blob/main/assignments/routes.js)  
+- [Courses Routes](https://github.com/akshat151/kanbas-node-server-app/blob/main/courses/routes.js)  
+- [Modules Routes](https://github.com/akshat151/kanbas-node-server-app/blob/main/modules/routes.js)
+
+#### 🔹 Data Layer
+
+- [File-based JSON DB](https://github.com/akshat151/kanbas-node-server-app/blob/main/Database/index.js)
+
+---
+
+## 🧭 GETTING STARTED
+
+### 🛠️ REQUIREMENTS
+
+- Node.js 18+
+- npm
+- React (bundled in frontend)
+- Any browser
+
+---
+
+### 🔧 LOCAL SETUP
+
+1. **Clone Both Repos**
+
+2. Backend Setup (Node.js)
+
+   cd kanbas-node-server-app
+   npm install
+   npm start
+
+   Server will run on http://localhost:4000 by default.
+
+3. Frontend Setup (React)
+
+   cd ../kanbas-react-web-app
+   npm install
+   npm start
+
+   Frontend runs on http://localhost:3000 and calls backend via REST.
+
+---
+
+📦 OPTIONAL SETUP
+	•	Add a .env file in kanbas-node-server-app:
+
+
+✅ TESTING
+
+Frontend
+
+Run tests with:
+
+npm test
+
+Uses App.test.js and setupTests.js.
+
+Backend
+
+Currently tested manually via frontend + REST calls. You can easily add routes and expand modularity.
+
+---
+
+📚 LICENSE
+
+This project is licensed under the MIT License. See the LICENSE file for more details.
+
+---
+
+🙌 CREDITS
+
+Built by Akshat to explore scalable full-stack development using React and Node.js.
+
+---
+Need help with:
+	•	🧪 Backend test setup
+	•	🔒 CORS / Auth middleware
+	•	🚀 Deployment to Render / Vercel
+Let me know!
